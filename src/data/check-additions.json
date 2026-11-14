@@ -1,0 +1,48 @@
+{
+  "solar": [
+    {
+      "look": "Terminal insulation in the screw",
+      "action": "Re-strip the wire so the screw clamps copper, not the insulation."
+    }
+  ],
+  "no-hot-tank": [
+    {
+      "look": "Relief valve weeps",
+      "action": "Replace the valve. Never plug it."
+    }
+  ],
+  "furnace": [
+    {
+      "look": "A call-for-heat test",
+      "action": "A tech can jump the blue wires at the furnace to see if the board is getting a call. Do not leave them jumped."
+    }
+  ],
+  "brakes": [
+    {
+      "look": "One wheel locks or the drum is out of round",
+      "action": "Out-of-round drums show up in a service bulletin. Do not tow with a brake that will not release."
+    }
+  ],
+  "tires": [
+    {
+      "look": "Bearing noise or a hot hub",
+      "action": "On Nev-R-Lube axles, check end play and that the hub rotates freely. A hot hub is a stop, not a later job."
+    }
+  ],
+  "st-hot": [
+    {
+      "look": "Cold water crossing into the hot side",
+      "action": "A shower-head pause button or an open bypass will do this. Close the bypass and do not shower on the trickle button."
+    },
+    {
+      "look": "It fires, then goes cold, and the LP supply is the suspect",
+      "action": "Have the regulator and LP pressure tested. A weak regulator on a late Globetrotter has been the cause."
+    }
+  ],
+  "fes": [
+    {
+      "look": "Rivets at the front locker, or a gap in the front seam",
+      "action": "Inspect for front-end separation. Replace the rivets. Do not just caulk the seam."
+    }
+  ]
+}

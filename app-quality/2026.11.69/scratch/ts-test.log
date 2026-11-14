@@ -1,0 +1,856 @@
+TAP version 13
+# (node:4986) ExperimentalWarning: The MockTimers API is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: callTool failure memo
+    # Subtest: replays an identical failure within the memo window without refetching
+    ok 1 - replays an identical failure within the memo window without refetching
+      ---
+      duration_ms: 4.287892
+      type: 'test'
+      ...
+    # Subtest: keys by token identity so a reminted token shares the memo entry
+    ok 2 - keys by token identity so a reminted token shares the memo entry
+      ---
+      duration_ms: 1.125021
+      type: 'test'
+      ...
+    # Subtest: sweeps expired entries on write so unique keys do not accumulate
+    ok 3 - sweeps expired entries on write so unique keys do not accumulate
+      ---
+      duration_ms: 1.819693
+      type: 'test'
+      ...
+    # Subtest: never memoizes login-required 401s
+    ok 4 - never memoizes login-required 401s
+      ---
+      duration_ms: 1.171348
+      type: 'test'
+      ...
+    1..4
+ok 1 - callTool failure memo
+  ---
+  duration_ms: 9.372421
+  type: 'suite'
+  ...
+# Subtest: callTool in the workspace preview vs deployed
+    # Subtest: returns pending (no loginRequired) when the preview has no token yet
+    ok 1 - returns pending (no loginRequired) when the preview has no token yet
+      ---
+      duration_ms: 0.731856
+      type: 'test'
+      ...
+    # Subtest: returns a plain error (no sign-in CTA) when a deployed app has no token
+    ok 2 - returns a plain error (no sign-in CTA) when a deployed app has no token
+      ---
+      duration_ms: 0.499905
+      type: 'test'
+      ...
+    # Subtest: treats a gate 401 in the preview as pending and parks the rejected token
+    ok 3 - treats a gate 401 in the preview as pending and parks the rejected token
+      ---
+      duration_ms: 1.411751
+      type: 'test'
+      ...
+    # Subtest: keeps loginRequired for a gate 401 on a deployed app
+    ok 4 - keeps loginRequired for a gate 401 on a deployed app
+      ---
+      duration_ms: 0.726717
+      type: 'test'
+      ...
+    1..4
+ok 2 - callTool in the workspace preview vs deployed
+  ---
+  duration_ms: 3.847679
+  type: 'suite'
+  ...
+# Subtest: callTool
+    # Subtest: resolves ok:false for non-serializable args instead of rejecting
+    ok 1 - resolves ok:false for non-serializable args instead of rejecting
+      ---
+      duration_ms: 0.509748
+      type: 'test'
+      ...
+    1..1
+ok 3 - callTool
+  ---
+  duration_ms: 0.617442
+  type: 'suite'
+  ...
+# Subtest: isLoginRequired
+    # Subtest: is true only for login-required failures
+    ok 1 - is true only for login-required failures
+      ---
+      duration_ms: 0.360473
+      type: 'test'
+      ...
+    1..1
+ok 4 - isLoginRequired
+  ---
+  duration_ms: 0.445971
+  type: 'suite'
+  ...
+# Subtest: redirectToLoginIfRequired
+    # Subtest: no-ops when login is not required
+    ok 1 - no-ops when login is not required
+      ---
+      duration_ms: 0.235472
+      type: 'test'
+      ...
+    # Subtest: navigates to the server-built loginUrl in the browser
+    ok 2 - navigates to the server-built loginUrl in the browser
+      ---
+      duration_ms: 0.119503
+      type: 'test'
+      ...
+    # Subtest: opens a new tab instead of navigating when framed
+    ok 3 - opens a new tab instead of navigating when framed
+      ---
+      duration_ms: 0.125475
+      type: 'test'
+      ...
+    # Subtest: falls back to navigation when framed and the popup is blocked
+    ok 4 - falls back to navigation when framed and the popup is blocked
+      ---
+      duration_ms: 0.101371
+      type: 'test'
+      ...
+    # Subtest: returns false when the result has no loginUrl
+    ok 5 - returns false when the result has no loginUrl
+      ---
+      duration_ms: 0.121827
+      type: 'test'
+      ...
+    # Subtest: returns false on the server (no window)
+    ok 6 - returns false on the server (no window)
+      ---
+      duration_ms: 0.063677
+      type: 'test'
+      ...
+    1..6
+ok 5 - redirectToLoginIfRequired
+  ---
+  duration_ms: 0.926131
+  type: 'suite'
+  ...
+# Subtest: GoogleCalendarTools
+    # Subtest: does not expose a list_events name
+    ok 1 - does not expose a list_events name
+      ---
+      duration_ms: 0.085884
+      type: 'test'
+      ...
+    1..1
+ok 6 - GoogleCalendarTools
+  ---
+  duration_ms: 0.139974
+  type: 'suite'
+  ...
+# Subtest: classifyCallToolError
+    # Subtest: returns null for successful results
+    ok 1 - returns null for successful results
+      ---
+      duration_ms: 0.155018
+      type: 'test'
+      ...
+    # Subtest: classifies a pending preview token as pending before any other kind
+    ok 2 - classifies a pending preview token as pending before any other kind
+      ---
+      duration_ms: 0.099149
+      type: 'test'
+      ...
+    # Subtest: classifies a deployed missing token as error, not a login CTA
+    ok 3 - classifies a deployed missing token as error, not a login CTA
+      ---
+      duration_ms: 0.13776
+      type: 'test'
+      ...
+    # Subtest: classifies gate loginRequired without a missing-token message as login
+    ok 4 - classifies gate loginRequired without a missing-token message as login
+      ---
+      duration_ms: 0.076483
+      type: 'test'
+      ...
+    # Subtest: classifies not_connected and failed_precondition
+    ok 5 - classifies not_connected and failed_precondition
+      ---
+      duration_ms: 0.145729
+      type: 'test'
+      ...
+    # Subtest: classifies scope_denied without claiming a missing grant
+    ok 6 - classifies scope_denied without claiming a missing grant
+      ---
+      duration_ms: 0.143855
+      type: 'test'
+      ...
+    # Subtest: classifies access_denied
+    ok 7 - classifies access_denied
+      ---
+      duration_ms: 0.070169
+      type: 'test'
+      ...
+    # Subtest: falls back to a generic error with the raw message
+    ok 8 - falls back to a generic error with the raw message
+      ---
+      duration_ms: 0.087079
+      type: 'test'
+      ...
+    1..8
+ok 7 - classifyCallToolError
+  ---
+  duration_ms: 1.122977
+  type: 'suite'
+  ...
+# Subtest: readinessProbeDelayMs
+    # Subtest: backs off through the schedule and then holds the last delay
+    ok 1 - backs off through the schedule and then holds the last delay
+      ---
+      duration_ms: 1.115108
+      type: 'test'
+      ...
+    # Subtest: clamps a negative attempt to the first delay
+    ok 2 - clamps a negative attempt to the first delay
+      ---
+      duration_ms: 0.147542
+      type: 'test'
+      ...
+    1..2
+ok 8 - readinessProbeDelayMs
+  ---
+  duration_ms: 2.1271
+  type: 'suite'
+  ...
+# Subtest: readinessProbeExhausted
+    # Subtest: gives up only once the total wait budget has elapsed
+    ok 1 - gives up only once the total wait budget has elapsed
+      ---
+      duration_ms: 0.239267
+      type: 'test'
+      ...
+    1..1
+ok 9 - readinessProbeExhausted
+  ---
+  duration_ms: 0.348411
+  type: 'suite'
+  ...
+# Subtest: accessDecision
+    # Subtest: uses the shared dev user only when auth is off and there is no database
+    ok 1 - uses the shared dev user only when auth is off and there is no database
+      ---
+      duration_ms: 1.095607
+      type: 'test'
+      ...
+    # Subtest: fails closed when auth is off but a database is configured
+    ok 2 - fails closed when auth is off but a database is configured
+      ---
+      duration_ms: 0.149005
+      type: 'test'
+      ...
+    # Subtest: ignores a claimed id when auth is on and there is no verified session
+    ok 3 - ignores a claimed id when auth is on and there is no verified session
+      ---
+      duration_ms: 0.163011
+      type: 'test'
+      ...
+    # Subtest: uses only the session id once auth is on
+    ok 4 - uses only the session id once auth is on
+      ---
+      duration_ms: 0.110331
+      type: 'test'
+      ...
+    1..4
+ok 10 - accessDecision
+  ---
+  duration_ms: 2.551797
+  type: 'suite'
+  ...
+# Subtest: verifyGateIdentityToken
+    # Subtest: returns the identity for a valid token
+    ok 1 - returns the identity for a valid token
+      ---
+      duration_ms: 14.237962
+      type: 'test'
+      ...
+    # Subtest: omits optional claims as nulls
+    ok 2 - omits optional claims as nulls
+      ---
+      duration_ms: 3.815716
+      type: 'test'
+      ...
+    # Subtest: rejects a wrong audience
+    ok 3 - rejects a wrong audience
+      ---
+      duration_ms: 8.567262
+      type: 'test'
+      ...
+    # Subtest: rejects a wrong issuer
+    ok 4 - rejects a wrong issuer
+      ---
+      duration_ms: 2.405205
+      type: 'test'
+      ...
+    # Subtest: rejects an expired token
+    ok 5 - rejects an expired token
+      ---
+      duration_ms: 2.599987
+      type: 'test'
+      ...
+    # Subtest: rejects a token without exp
+    ok 6 - rejects a token without exp
+      ---
+      duration_ms: 3.087514
+      type: 'test'
+      ...
+    # Subtest: rejects a token signed by a different key with the same kid
+    ok 7 - rejects a token signed by a different key with the same kid
+      ---
+      duration_ms: 2.68785
+      type: 'test'
+      ...
+    # Subtest: refetches the JWKS when the kid rotates
+    ok 8 - refetches the JWKS when the kid rotates
+      ---
+      duration_ms: 3.697498
+      type: 'test'
+      ...
+    1..8
+ok 11 - verifyGateIdentityToken
+  ---
+  duration_ms: 42.857819
+  type: 'suite'
+  ...
+# Subtest: gateIdentityFromHeaders
+    # Subtest: verifies the header token end to end and fails closed without it
+    ok 1 - verifies the header token end to end and fails closed without it
+      ---
+      duration_ms: 18.119621
+      type: 'test'
+      ...
+    # Subtest: activates on a deployed-shaped request without GROK_GATE_ORIGIN
+    ok 2 - activates on a deployed-shaped request without GROK_GATE_ORIGIN
+      ---
+      duration_ms: 3.559038
+      type: 'test'
+      ...
+    # Subtest: verifies a preview-audience token with no gate env vars via the loopback default
+    ok 3 - verifies a preview-audience token with no gate env vars via the loopback default
+      ---
+      duration_ms: 1.632732
+      type: 'test'
+      ...
+    # Subtest: rejects a wrong-issuer token in the loopback default mode
+    ok 4 - rejects a wrong-issuer token in the loopback default mode
+      ---
+      duration_ms: 1.658563
+      type: 'test'
+      ...
+    # Subtest: verifies a preview-audience token when only GROK_GATE_ORIGIN is set
+    ok 5 - verifies a preview-audience token when only GROK_GATE_ORIGIN is set
+      ---
+      duration_ms: 2.523043
+      type: 'test'
+      ...
+    # Subtest: rejects a preview-audience token when GROK_PROJECT_ID is set
+    ok 6 - rejects a preview-audience token when GROK_PROJECT_ID is set
+      ---
+      duration_ms: 8.582302
+      type: 'test'
+      ...
+    # Subtest: rejects an app-audience token in preview mode
+    ok 7 - rejects an app-audience token in preview mode
+      ---
+      duration_ms: 2.030401
+      type: 'test'
+      ...
+    1..7
+ok 12 - gateIdentityFromHeaders
+  ---
+  duration_ms: 38.779257
+  type: 'suite'
+  ...
+# Subtest: gateIdentityEnabled
+    # Subtest: is enabled by default with no gate env vars
+    ok 1 - is enabled by default with no gate env vars
+      ---
+      duration_ms: 0.140811
+      type: 'test'
+      ...
+    # Subtest: is disabled when VITE_AUTH_ENABLED is false
+    ok 2 - is disabled when VITE_AUTH_ENABLED is false
+      ---
+      duration_ms: 0.087825
+      type: 'test'
+      ...
+    1..2
+ok 13 - gateIdentityEnabled
+  ---
+  duration_ms: 0.322974
+  type: 'suite'
+  ...
+# Subtest: gateTokenAudience
+    # Subtest: pins app:<id> when GROK_PROJECT_ID is set, even alongside GROK_GATE_ORIGIN
+    ok 1 - pins app:<id> when GROK_PROJECT_ID is set, even alongside GROK_GATE_ORIGIN
+      ---
+      duration_ms: 0.101913
+      type: 'test'
+      ...
+    # Subtest: pins preview when GROK_PROJECT_ID is unset
+    ok 2 - pins preview when GROK_PROJECT_ID is unset
+      ---
+      duration_ms: 0.1107
+      type: 'test'
+      ...
+    1..2
+ok 14 - gateTokenAudience
+  ---
+  duration_ms: 0.29981
+  type: 'suite'
+  ...
+# Subtest: gateIdentityUserInfo
+    # Subtest: falls back to a synthetic email and name for sub-only claims
+    ok 1 - falls back to a synthetic email and name for sub-only claims
+      ---
+      duration_ms: 0.184286
+      type: 'test'
+      ...
+    # Subtest: keeps real claims, lowercasing the email and marking it verified
+    ok 2 - keeps real claims, lowercasing the email and marking it verified
+      ---
+      duration_ms: 0.137066
+      type: 'test'
+      ...
+    1..2
+ok 15 - gateIdentityUserInfo
+  ---
+  duration_ms: 0.403691
+  type: 'suite'
+  ...
+# Subtest: sessionBoundToGateIdentity
+    # Subtest: keeps the session when it is bound to the same gate sub
+    ok 1 - keeps the session when it is bound to the same gate sub
+      ---
+      duration_ms: 0.13048
+      type: 'test'
+      ...
+    # Subtest: rotates when the session belongs to a different gate sub
+    ok 2 - rotates when the session belongs to a different gate sub
+      ---
+      duration_ms: 0.067313
+      type: 'test'
+      ...
+    # Subtest: rotates when the session user has no gate-bound account
+    ok 3 - rotates when the session user has no gate-bound account
+      ---
+      duration_ms: 0.064433
+      type: 'test'
+      ...
+    1..3
+ok 16 - sessionBoundToGateIdentity
+  ---
+  duration_ms: 0.349122
+  type: 'suite'
+  ...
+# Subtest: resolveSignInGateState
+    # Subtest: is pending while the session check is in flight, user or not
+    ok 1 - is pending while the session check is in flight, user or not
+      ---
+      duration_ms: 0.727051
+      type: 'test'
+      ...
+    # Subtest: is signed_in once a user is present
+    ok 2 - is signed_in once a user is present
+      ---
+      duration_ms: 0.131347
+      type: 'test'
+      ...
+    # Subtest: is signed_out only after the check resolved with no user
+    ok 3 - is signed_out only after the check resolved with no user
+      ---
+      duration_ms: 0.140377
+      type: 'test'
+      ...
+    1..3
+ok 17 - resolveSignInGateState
+  ---
+  duration_ms: 1.862791
+  type: 'suite'
+  ...
+# Subtest: backup integrity
+    # Subtest: accepts a file whose checksum matches and rejects a damaged one
+    ok 1 - accepts a file whose checksum matches and rejects a damaged one
+      ---
+      duration_ms: 1.586316
+      type: 'test'
+      ...
+    # Subtest: matches NIST SHA-256 vectors
+    ok 2 - matches NIST SHA-256 vectors
+      ---
+      duration_ms: 19.786184
+      type: 'test'
+      ...
+    # Subtest: names a backup with its date and counts repeated record ids
+    ok 3 - names a backup with its date and counts repeated record ids
+      ---
+      duration_ms: 0.443741
+      type: 'test'
+      ...
+    1..3
+ok 18 - backup integrity
+  ---
+  duration_ms: 22.757982
+  type: 'suite'
+  ...
+# Subtest: erase databases
+    # Subtest: resolves true only after all three succeed
+    ok 1 - resolves true only after all three succeed
+      ---
+      duration_ms: 0.949253
+      type: 'test'
+      ...
+    # Subtest: counts a blocked database once, and only when it later succeeds
+    ok 2 - counts a blocked database once, and only when it later succeeds
+      ---
+      duration_ms: 0.329834
+      type: 'test'
+      ...
+    # Subtest: resolves false only after every database has a terminal event
+    ok 3 - resolves false only after every database has a terminal event
+      ---
+      duration_ms: 0.225187
+      type: 'test'
+      ...
+    # Subtest: treats a database that stays blocked as not cleared
+    ok 4 - treats a database that stays blocked as not cleared
+      ---
+      duration_ms: 30.364732
+      type: 'test'
+      ...
+    1..4
+ok 19 - erase databases
+  ---
+  duration_ms: 33.013337
+  type: 'suite'
+  ...
+# Subtest: floor inches
+    # Subtest: names the low side and rounds to the nearest quarter inch
+    ok 1 - names the low side and rounds to the nearest quarter inch
+      ---
+      duration_ms: 1.895228
+      type: 'test'
+      ...
+    # Subtest: does the jack after the tires, and stays quiet under an eighth of an inch
+    ok 2 - does the jack after the tires, and stays quiet under an eighth of an inch
+      ---
+      duration_ms: 1.374939
+      type: 'test'
+      ...
+    # Subtest: does not invent a distance without a span, and refuses a phone that is not flat
+    ok 3 - does not invent a distance without a span, and refuses a phone that is not flat
+      ---
+      duration_ms: 0.592382
+      type: 'test'
+      ...
+    # Subtest: treats a flat screen-up iPhone as level after the sign flip
+    ok 4 - treats a flat screen-up iPhone as level after the sign flip
+      ---
+      duration_ms: 0.497615
+      type: 'test'
+      ...
+    # Subtest: rounds and parses spans without borrowing a length from the model
+    ok 5 - rounds and parses spans without borrowing a length from the model
+      ---
+      duration_ms: 0.226018
+      type: 'test'
+      ...
+    # Subtest: keeps another coach's spans when a backup names only one
+    ok 6 - keeps another coach's spans when a backup names only one
+      ---
+      duration_ms: 0.568647
+      type: 'test'
+      ...
+    # Subtest: fills a hub-face track only when the model has one number
+    ok 7 - fills a hub-face track only when the model has one number
+      ---
+      duration_ms: 0.308259
+      type: 'test'
+      ...
+    # Subtest: fills a jack span only for a listed floor plan
+    ok 8 - fills a jack span only for a listed floor plan
+      ---
+      duration_ms: 0.313264
+      type: 'test'
+      ...
+    # Subtest: takes a case offset out of a later reading
+    ok 9 - takes a case offset out of a later reading
+      ---
+      duration_ms: 0.471361
+      type: 'test'
+      ...
+    # Subtest: does not treat a blank typed reading as level
+    ok 10 - does not treat a blank typed reading as level
+      ---
+      duration_ms: 0.534466
+      type: 'test'
+      ...
+    # Subtest: uses the sensor's combined tilt and stops at 15 degrees
+    ok 11 - uses the sensor's combined tilt and stops at 15 degrees
+      ---
+      duration_ms: 0.246511
+      type: 'test'
+      ...
+    # Subtest: stops a large correction instead of quoting it as an ordinary move
+    ok 12 - stops a large correction instead of quoting it as an ordinary move
+      ---
+      duration_ms: 0.135041
+      type: 'test'
+      ...
+    1..12
+ok 20 - floor inches
+  ---
+  duration_ms: 8.588281
+  type: 'suite'
+  ...
+# Subtest: a missing screen is the raw chunk crash, not every error
+ok 21 - a missing screen is the raw chunk crash, not every error
+  ---
+  duration_ms: 1.973306
+  type: 'test'
+  ...
+# Subtest: previewPathPrefix
+    # Subtest: reads the port id segment on path-based preview hosts
+    ok 1 - reads the port id segment on path-based preview hosts
+      ---
+      duration_ms: 0.923884
+      type: 'test'
+      ...
+    # Subtest: ignores other hosts and paths without a port id
+    ok 2 - ignores other hosts and paths without a port id
+      ---
+      duration_ms: 0.154176
+      type: 'test'
+      ...
+    1..2
+ok 22 - previewPathPrefix
+  ---
+  duration_ms: 1.920112
+  type: 'suite'
+  ...
+# Subtest: prefixRewrite
+    # Subtest: strips the prefix on input
+    ok 1 - strips the prefix on input
+      ---
+      duration_ms: 0.293225
+      type: 'test'
+      ...
+    # Subtest: adds the prefix on output
+    ok 2 - adds the prefix on output
+      ---
+      duration_ms: 0.18091
+      type: 'test'
+      ...
+    1..2
+ok 23 - prefixRewrite
+  ---
+  duration_ms: 0.618298
+  type: 'suite'
+  ...
+# Subtest: hash addresses
+    # Subtest: sends a screen path to its hash and leaves real pages and files
+    ok 1 - sends a screen path to its hash and leaves real pages and files
+      ---
+      duration_ms: 1.303003
+      type: 'test'
+      ...
+    # Subtest: keeps a cold address instead of opening Home
+    ok 2 - keeps a cold address instead of opening Home
+      ---
+      duration_ms: 0.820363
+      type: 'test'
+      ...
+    # Subtest: follows the open screen after the first paint
+    ok 3 - follows the open screen after the first paint
+      ---
+      duration_ms: 0.17122
+      type: 'test'
+      ...
+    1..3
+ok 24 - hash addresses
+  ---
+  duration_ms: 3.137589
+  type: 'suite'
+  ...
+# Subtest: tire load table
+    # Subtest: picks the lowest cold pressure that carries the axle end
+    ok 1 - picks the lowest cold pressure that carries the axle end
+      ---
+      duration_ms: 1.205157
+      type: 'test'
+      ...
+    # Subtest: does not invent a pressure over the published row
+    ok 2 - does not invent a pressure over the published row
+      ---
+      duration_ms: 0.152386
+      type: 'test'
+      ...
+    1..2
+ok 25 - tire load table
+  ---
+  duration_ms: 2.1615
+  type: 'suite'
+  ...
+# Subtest: weigh
+    # Subtest: splits a scale ticket into tongue weight and trailer weight
+    ok 1 - splits a scale ticket into tongue weight and trailer weight
+      ---
+      duration_ms: 1.399329
+      type: 'test'
+      ...
+    # Subtest: reads a cumulative CAT ticket as three axle groups
+    ok 2 - reads a cumulative CAT ticket as three axle groups
+      ---
+      duration_ms: 0.72736
+      type: 'test'
+      ...
+    # Subtest: does not invent room under a missing combined limit
+    ok 3 - does not invent room under a missing combined limit
+      ---
+      duration_ms: 0.415842
+      type: 'test'
+      ...
+    # Subtest: compares trailer GVWR with the loaded trailer, not the axle group
+    ok 4 - compares trailer GVWR with the loaded trailer, not the axle group
+      ---
+      duration_ms: 0.165281
+      type: 'test'
+      ...
+    # Subtest: keeps truck-only payload separate from payload while coupled
+    ok 5 - keeps truck-only payload separate from payload while coupled
+      ---
+      duration_ms: 0.146497
+      type: 'test'
+      ...
+    # Subtest: refuses a partial ticket for the service log
+    ok 6 - refuses a partial ticket for the service log
+      ---
+      duration_ms: 0.248747
+      type: 'test'
+      ...
+    # Subtest: uses the same 20 lb disagreement for the log and the ticket note
+    ok 7 - uses the same 20 lb disagreement for the log and the ticket note
+      ---
+      duration_ms: 0.338974
+      type: 'test'
+      ...
+    # Subtest: reads a loaded trailer from a bars-on ticket when the truck was weighed alone
+    ok 8 - reads a loaded trailer from a bars-on ticket when the truck was weighed alone
+      ---
+      duration_ms: 0.284107
+      type: 'test'
+      ...
+    # Subtest: does not turn a bad entry into a different weight
+    ok 9 - does not turn a bad entry into a different weight
+      ---
+      duration_ms: 2.74218
+      type: 'test'
+      ...
+    # Subtest: builds an id when randomUUID is missing
+    ok 10 - builds an id when randomUUID is missing
+      ---
+      duration_ms: 0.995796
+      type: 'test'
+      ...
+    # Subtest: blocks a negative tongue weight
+    ok 11 - blocks a negative tongue weight
+      ---
+      duration_ms: 0.141121
+      type: 'test'
+      ...
+    1..11
+ok 26 - weigh
+  ---
+  duration_ms: 10.183906
+  type: 'suite'
+  ...
+# Subtest: shared truck sticker
+    # Subtest: keeps the truck when a backup has another coach and no sticker of its own
+    ok 1 - keeps the truck when a backup has another coach and no sticker of its own
+      ---
+      duration_ms: 0.603758
+      type: 'test'
+      ...
+    # Subtest: seeds a new coach from a truck already typed on another coach
+    ok 2 - seeds a new coach from a truck already typed on another coach
+      ---
+      duration_ms: 0.159986
+      type: 'test'
+      ...
+    1..2
+ok 27 - shared truck sticker
+  ---
+  duration_ms: 0.905561
+  type: 'suite'
+  ...
+# Subtest: service worker address
+    # Subtest: changes with the copy and treats an unversioned worker as old
+    ok 1 - changes with the copy and treats an unversioned worker as old
+      ---
+      duration_ms: 0.758637
+      type: 'test'
+      ...
+    1..1
+ok 28 - service worker address
+  ---
+  duration_ms: 1.45879
+  type: 'suite'
+  ...
+# Subtest: year scope
+    # Subtest: moves a 2027 size off the lead when the coach is older
+    ok 1 - moves a 2027 size off the lead when the coach is older
+      ---
+      duration_ms: 1.77616
+      type: 'test'
+      ...
+    # Subtest: keeps a year that is this coach
+    ok 2 - keeps a year that is this coach
+      ---
+      duration_ms: 0.196603
+      type: 'test'
+      ...
+    # Subtest: does not treat a revision month or a DOT example as a model year
+    ok 3 - does not treat a revision month or a DOT example as a model year
+      ---
+      duration_ms: 0.21316
+      type: 'test'
+      ...
+    # Subtest: treats a short range as those model years
+    ok 4 - treats a short range as those model years
+      ---
+      duration_ms: 0.528257
+      type: 'test'
+      ...
+    # Subtest: does not lead a list with another year's note
+    ok 5 - does not lead a list with another year's note
+      ---
+      duration_ms: 0.190942
+      type: 'test'
+      ...
+    # Subtest: leaves the wording alone when no year is set
+    ok 6 - leaves the wording alone when no year is set
+      ---
+      duration_ms: 0.108353
+      type: 'test'
+      ...
+    1..6
+ok 29 - year scope
+  ---
+  duration_ms: 4.032429
+  type: 'suite'
+  ...
+1..29
+# tests 108
+# suites 28
+# pass 108
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1893.247251

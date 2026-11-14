@@ -1,0 +1,756 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/parts-BQFqy33o.js
+/** Excerpted parts-book and guide rows are not included. */
+var catalog = [];
+var parts = [...[
+	{
+		id: "lugnut",
+		name: "Lug nut, 1/2-20 chrome acorn",
+		pn: "400923",
+		application: "Airstream aluminum wheels. 60° cone. Confirm the number on your wheel before you order.",
+		notes: "60° cone. Torque 110 ft-lb on aluminum, 100 ft-lb on the steel spare. Dealer 0190012-2 is superseded; P&S 0190029 cross-references 400923.",
+		verify: false,
+		system: "Running gear"
+	},
+	{
+		id: "tires",
+		name: "Tires, wheels, and spare",
+		pn: "GT 411052 · CL 455642",
+		application: "Globetrotter 15 in Goodyear Endurance. Classic 16 in wheel assembly.",
+		notes: "2027 sizes: Classic LT225/75R16 at 90 psi max cold. Globetrotter ST225/75R15 at 80 psi max cold. Shock 0220003 is used on both. Replace tires at 5 years.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "brakes",
+		name: "Electric brake assembly",
+		pn: "GT 410980-102 LH / 410980-103 RH",
+		application: "2025 Globetrotter: 12 in Nev-R-Adjust. 2026 Classic brakes come with axle 411262-01 (5,000 lb, 30RB/33FB) or 411262-02 (4,000 lb, 28RB).",
+		notes: "K23-459-00 is the catalog kit from a 2023 Globetrotter complaint where the right rear would not release. Quote the VIN. Classic Tow Assist sensor 514431-101, ECU 514431-1.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "shoes",
+		name: "Brake shoe and lining kit",
+		pn: "K71-047-00 / K71-127-00",
+		application: "Match the size stamped on the backing plate. 10×2-1/4 uses different kits than 12×2.",
+		notes: "Replace magnets with the shoes. Self-adjusting brakes still get a yearly look.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "magnet",
+		name: "Brake magnet kit",
+		pn: "K71-105-00",
+		application: "One kit style per brake size.",
+		notes: "Field check is about 3 A per magnet. A worn magnet face is done.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "nev-r-lube",
+		name: "Nev-R-Lube bearing cartridge",
+		pn: "Dexter 31-73-3",
+		application: "42 mm sealed cartridge where Nev-R-Lube hubs are fitted. Order the cartridge, not a complete axle, unless the hub is damaged.",
+		notes: "Not interchangeable with cone bearings. Do not repack. Replace if rough, noisy, or end play is outside 0.001–0.010 in. A Dexter tech job.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "bearings",
+		name: "Conventional bearing sets",
+		pn: "Inner L68149 / L68111",
+		application: "E-Z Lube and conventional hubs only. Read the numbers on the old cone before you order.",
+		notes: "3.5K outer is L44649/L44610. 4.4K outer matches the 5.2K outer. Grease seal 3.5K: 010-019-00. 5.2K/6K: 010-036-00 or 010-010-00 by spindle.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "jack",
+		name: "Stabilizer and Barker power jack",
+		pn: "401014 · 401075-01",
+		application: "Power jack and stabilizer on a Classic. Stabilizers stop motion. They do not lift or level the trailer.",
+		notes: "Lube the power jack yearly.",
+		verify: true,
+		system: "Body"
+	},
+	{
+		id: "sealant",
+		name: "Roof and seam sealants",
+		pn: "Vulkem 360002 · butyl 360001",
+		application: "Aluminum shell. Sikaflex 221 is the usual choice at fans, vents, and other fixtures.",
+		notes: "RTV 365330-01 white, -03 aluminum gray, -04 Adseal. Walbernize 28433W. Acryl-R gray 28430W-01. Seamfil 360301-02. Parbond clear (Parr K5908-05) for rivet-line wicking.",
+		verify: false,
+		system: "Body"
+	},
+	{
+		id: "door-seal",
+		name: "Door, window, and roof gaskets",
+		pn: "365232",
+		application: "Main and baggage door seal.",
+		notes: "Awning kit 365527. Wall-mechanicals kit 365528. Treat seals with 303, not petroleum.",
+		verify: false,
+		system: "Body"
+	},
+	{
+		id: "striker",
+		name: "Entry-door striker",
+		pn: "385595",
+		application: "Main door pocket strike. 380557 (1972–2005) is no longer available.",
+		notes: "The striker bolt is adjustable. Level the coach before you decide the door is bent.",
+		verify: true,
+		system: "Body"
+	},
+	{
+		id: "anode",
+		name: "Suburban water-heater anode",
+		pn: "233514",
+		application: "Suburban SW tank heaters only. Not ST tankless, not AquaGo, not Atwood/Dometic.",
+		notes: "Magnesium is standard. 1-1/16 in socket. Replace yearly or when about 75% is gone.",
+		verify: true,
+		system: "Water heater"
+	},
+	{
+		id: "descale",
+		name: "Suburban tankless descaling kit",
+		pn: "521163",
+		application: "ST-65RL and other Suburban ST tankless heaters, including 2025 Globetrotter.",
+		notes: "Yearly. Do not substitute random acid. Truma AquaGo uses Truma tablets only. Girard boards start at 0.70 GPM, later changed to 0.60 GPM, both ±10%.",
+		verify: false,
+		system: "Water heater"
+	},
+	{
+		id: "glycol",
+		name: "Alde heating fluid",
+		pn: "360371-201C",
+		application: "Classic hydronic system. The jug is 5 gallons. Not automotive antifreeze.",
+		notes: "Do not mix with automotive antifreeze. Expansion tank 602541-05. Bleeders 602541-12 / -18 / -19. Replace every 2 years, or 5 with Alde Premium.",
+		verify: false,
+		system: "Alde"
+	},
+	{
+		id: "strainer",
+		name: "Fresh-water pump strainer",
+		pn: "601668-01",
+		application: "Shurflo 3 GPM pump on Classic and Globetrotter. 1/2 in, 50 mesh.",
+		notes: "The clear cap cracks after winterizing. Check the O-ring when the pump will not prime.",
+		verify: false,
+		system: "Plumbing"
+	},
+	{
+		id: "city",
+		name: "City-water inlet with 50 psi regulator",
+		pn: "601392-06",
+		application: "City-water inlet on a 2025 Globetrotter or a 2026 Classic. Confirm the regulator on yours.",
+		notes: "2020 and later manuals limit the inline regulator to 50 psi. 2014 through 2016 say 65 psi. 2017 through 2019 were not checked. A failed regulator lets campground pressure into the coach.",
+		verify: false,
+		system: "Plumbing"
+	},
+	{
+		id: "ac-filter",
+		name: "A/C return-air filter",
+		pn: "382766-01",
+		application: "Coleman-Mach ducted A/C on both lines. MERV 8.",
+		notes: "Rinse or replace on the 2-week-in-use schedule. Dry before reinstalling.",
+		verify: false,
+		system: "Air conditioning"
+	},
+	{
+		id: "ac-unit",
+		name: "Coleman-Mach rooftop A/C",
+		pn: "CL 690836-01",
+		application: "Classic Mach 8 Plus 15K heat pump. Globetrotter Mach 8HP.",
+		notes: "NetZone kit on Classic is 690830. Fault LED meanings are in Fault codes. 2025 GT built late July–August 2024 may need TSB 201 (terminating resistor).",
+		verify: true,
+		system: "Air conditioning"
+	},
+	{
+		id: "fridge",
+		name: "12 V compressor refrigerator",
+		pn: "690735-01",
+		application: "Size by floor plan. The 25FB uses a Nova Kool. Other floors are listed by cubic feet.",
+		notes: "Classic brochure: 9.7 cu ft on larger floors, 8.2 on the 28RB. Globetrotter: 6.8 / 8 / 9.7. Confirm the data plate. A Norcold on a 2019 or 2020 Nest is not the Classic or Globetrotter fridge. An N8 or N10, if that is the badge, starts near 10.9 V, cuts out near 10.4 V, and restarts near 11.8 V. A dark blue light is the fuse or reversed polarity.",
+		verify: true,
+		system: "Refrigerator"
+	},
+	{
+		id: "fuses",
+		name: "Fuses and breakers (2025 Classic)",
+		pn: "500773-01 / -15 / -20 / -30",
+		application: "Blade fuses 1, 15, 20, 30 A. Power-jack 30 A blade breaker 514198-01.",
+		notes: "From the 2025 Classic manual. Confirm by VIN on other years. Replace only with the same rating.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "rivets",
+		name: "Olympic rivets (2025 Classic)",
+		pn: "330127-05 · 330126-03",
+		application: "Interior dome and exterior stainless dome. Match grip to the stack.",
+		notes: "Exterior uses a #30 drill. Underbelly large flange: 330034-100 (3/16, #11 drill) and 330038 (5/32, #20 drill). Eye protection when you drive them.",
+		verify: true,
+		system: "Body"
+	},
+	{
+		id: "breakaway-sw",
+		name: "Breakaway switch",
+		pn: "514012",
+		application: "Globetrotter and Classic. The house battery feeds the brakes through this switch.",
+		notes: "Test every 90 days. Pin out no more than 20–30 seconds.",
+		verify: false,
+		system: "Running gear"
+	},
+	{
+		id: "coupler",
+		name: "Coupler",
+		pn: "455653",
+		application: "Demco coupler used on a 2026 Classic. Confirm the stamp on yours.",
+		notes: "Ball is 2-5/16 in. Some Atwood couplers (88007, 88010, 88555, 88600) are a poor match for weight-distribution hitches — Andersen warns the latch can creep open.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "shunt",
+		name: "Victron SmartShunt and solar controller",
+		pn: "513899",
+		application: "Victron SmartShunt 500 A on the Classics and Globetrotters that use this system. SmartSolar 513475-01 is the charge controller.",
+		notes: "Battery negative only on the BATTERY MINUS stud. Every load and charger on SYSTEM MINUS. Fused red lead to battery positive. Current shown backwards means those two negatives are swapped. A current reading with everything off needs a zero calibration. A state of charge that drifts is not seeing a full charge often enough.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "hood",
+		name: "Range-hood filter and Alde glycol jug",
+		pn: "512210-100",
+		application: "Range hood filter. The number is on the hood parts list for a Classic.",
+		notes: "Clean the hood filter on the 90-day pass along with the step. A Baraldi hood may use a 3.15 A fuse. Confirm the label before you buy one.",
+		verify: false,
+		system: "Appliances"
+	},
+	{
+		id: "grease-seal",
+		name: "Hub grease seal",
+		pn: "010-019-00",
+		application: "3.5K hubs use 010-019-00. Larger spindles use the 010-036 or 010-010 seal. Measure the journal.",
+		notes: "Forum cross-references for the double-lip seal include National 440265560 and Redline RG06-070. Read the old seal first.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "spindle-hw",
+		name: "Spindle nut, washer, cotter, and cap",
+		pn: "006-176-00",
+		application: "Dexter 3.5K and 5.2K–6K hubs.",
+		notes: "New cotter every time the nut comes off. E-Z Lube caps are 021-041-01 and 021-042-01.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "stud",
+		name: "Wheel stud",
+		pn: "007-122-00",
+		application: "Dexter 3.5K and 6K hubs. 1/2-20 × 2.0 in, pressed in.",
+		notes: "Pressed studs are a shop job. Do not hammer one in on the road.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "shock",
+		name: "Axle shock",
+		pn: "0220003",
+		application: "Used on the Globetrotter and the Classic. Confirm the number on the old part.",
+		notes: "Replace in pairs if one is leaking. Confirm the mount on your axle. Owners find the nuts missing, most often the curb-side rear upper. They are ordinary hardware. Look at them when you check the lugs.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "brake-10",
+		name: "10 in electric brake, older axles",
+		pn: "K23-026-00 / K23-027-00",
+		application: "Older 10 in, 3.5K Dexter brakes. Not the 12 in brakes used on 2025–26 coaches.",
+		notes: "A 2025 Globetrotter or 2026 Classic uses 12 in drums. Use this pair only if the backing plate says 10 in.",
+		verify: true,
+		system: "Running gear"
+	},
+	{
+		id: "pump",
+		name: "Fresh-water pump and controller",
+		pn: "602307",
+		application: "Shurflo 3 GPM on Classic and Globetrotter. Read the model on the pump.",
+		notes: "If the label is a 4008, shut-off is about 55 psi, bypass starts near 40 psi, and full bypass is near 62 psi. Skipping sanitizing is the main reason that pressure switch fails early. 94-800-02 is the drive assembly, not the check-valve kit.",
+		verify: true,
+		system: "Plumbing"
+	},
+	{
+		id: "flush",
+		name: "Black-tank flush vacuum breaker",
+		pn: "601441-02",
+		application: "No-Fuss flush. The Globetrotter kit 601441-02 is no longer available.",
+		notes: "A failed breaker is the usual cause of flush odor in a closet. Valterra 1/2 in MPT is the retail equivalent. Match the hub on the old valve.",
+		verify: true,
+		system: "Plumbing"
+	},
+	{
+		id: "dump",
+		name: "Dump valve",
+		pn: "601607-11",
+		application: "3 in waste valve. Classic extension rods 116392-01 through -04.",
+		notes: "Confirm hub or spigot ends before you order. Valterra is the usual brand.",
+		verify: true,
+		system: "Plumbing"
+	},
+	{
+		id: "faucets",
+		name: "Faucets, shower valve, and cartridges",
+		pn: "602961",
+		application: "Globetrotter galley is a Franke FF5800CH. Classic galley is a Grohe Minta.",
+		notes: "These cartridges are maker parts, not Airstream trim numbers. Moen Align kit 160657 (black 2-flat nut; not interchangeable with 1255 or 150257). O-ring 137515. Handle 172665. Posi-Temp cartridge 1222, puller 104421. Grohe Minta 46048000. Grohe Concetto trim cartridge 48491000. The 33FB lav cartridge is not confirmed — look up the model under the spout.",
+		verify: true,
+		system: "Plumbing"
+	},
+	{
+		id: "toilet",
+		name: "Toilet",
+		pn: "690621-BOX",
+		application: "Dometic china on GT 25FB/27FB and Classic 28RB/30RB.",
+		notes: "Macerator spares: pump 602659-101, 12 V valve 602659-102, board 602659-103, vacuum breaker 602659-104.",
+		verify: true,
+		system: "Plumbing"
+	},
+	{
+		id: "lp-reg",
+		name: "LP regulator",
+		pn: "602870",
+		application: "Two-stage auto-changeover on a Classic. A Globetrotter may only have the install kit. Read the regulator.",
+		notes: "The 11 in pigtails are not a separate Airstream number. They come with 602870. Plan on replacement around 8–10 years. No sealant on flare threads.",
+		verify: true,
+		system: "Propane"
+	},
+	{
+		id: "lights",
+		name: "Exterior and interior LED lamps",
+		pn: "512859",
+		application: "Clearance, tail, and porch lights. Read the old lamp before you order.",
+		notes: "Classic interior lamps are often the whole fixture: ceiling, courtesy, closet, shower, puck, grab-handle, and aisle. A step light, dump-valve light, or awning LED may be a different length by floor plan. Read the old lamp.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "smartplug",
+		name: "SmartPlug inlet and cord",
+		pn: "513797",
+		application: "513797 is no longer available. 514453-01 gray is the current inlet.",
+		notes: "2023 bronze D-rings are recall 23V-519. 513581 has been labeled both 30 A and 50 A. Confirm the inlet before you order a cord.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "converter",
+		name: "Converter and power center",
+		pn: "514297",
+		application: "A Globetrotter often has a Progressive Dynamics 60 A converter. A Classic may not name the brand. Read the label.",
+		notes: "120 V breakers are the 510564 series. Read the label. Modes are about 14.4 V boost, 13.6 V normal, and 13.2 V storage after a long sit. A lithium owner's manual says 14.4 V. The bench sheet says 13.6 V, or 14.6 V on a lithium model. Disconnect the battery and measure the converter by itself.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "inverter",
+		name: "2,000 W inverter",
+		pn: "514263",
+		application: "Progressive Dynamics inverter. Globetrotter 514263, Classic 514515.",
+		notes: "Outlets stay dead until the inverter is on and the battery disconnect is on. On a PD1600, E-1 (under 10.5 V) restarts by itself near 12.0 V. E-3, E-5, E-6, and E-7 need the button. Confirm the label. Trade Wind uses a Victron, not this number.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "battery",
+		name: "Battle Born battery",
+		pn: "513862",
+		application: "GC2 LiFePO4, the lithium option on these coaches.",
+		notes: "513862 is the GC2. A GC3 or GC3H 270 Ah, where fitted, is 514020-01 — do not order one for the other. Classic battery-heater switch is 514009. Do not charge below 32 °F. The GC3 heading also says 25 °F; use 32. Replacement batteries on a Trade Wind 27FB have to be the same Battle Born model.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "gc3",
+		name: "Battle Born GC3 270 Ah",
+		pn: "514020-01",
+		application: "Only where the label says BBGC3 or BBGC3H. Not the GC2, which is 513862.",
+		notes: "Charge 14.2–14.6 V. Float 13.4–13.8 V. No charge below 32 °F, and none above 131 °F. No discharge at 140 °F. Discharge stops under 10.6 V. The spec table also says a 10 V cut-off. A surge over about 500 A reconnects in 5 seconds. After a short, take the cables off: above 10 V reconnect, under 10 V call Battle Born. Terminals 9–11 ft-lb. The GC3H heater draws about 28 W.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "penguin",
+		name: "Dometic Penguin roof air conditioner",
+		pn: "690323",
+		application: "Older coaches. Some lists spell it Penquin. Dometic spells it Penguin. Not the Coleman-Mach on a current Classic or Globetrotter.",
+		notes: "The exact Dometic model is not stated, so do not assume 600315 or 57915. Clean the filter at least every 2 weeks of use. A Penguin II 13.5K heat pump uses R-410A. CCC2 codes and single-zone codes are different. Read the thermostat.",
+		verify: true,
+		system: "Air conditioning"
+	},
+	{
+		id: "rm-igniter",
+		name: "Dometic absorption-fridge igniter",
+		pn: "2931132019",
+		application: "RM/DM 2-way and 3-way fridges. Not the 12 V compressor fridge.",
+		notes: "Spark gap about 3/16 in. A good thermocouple reads 22–36 mV within 45 seconds. The control fuse is not replaceable: fix the cause, then power off, wait 5 seconds, on. The AC heater fuse is 5 A, and only after the cord is unplugged and the 12 V wires are off.",
+		verify: true,
+		system: "Refrigerator"
+	},
+	{
+		id: "smev",
+		name: "SMEV 8022 two-burner cooktop",
+		pn: "690576",
+		application: "Sport 2010–2015 and some other coaches through 2021. Read the cooktop label. Not every current galley.",
+		notes: "Propane inlet about 11–14 in. water column. Manifold about 10. Ignition is 12 V on a 1 A fuse. Hold the knob until the flame-failure device stays open. Gas shuts off about 20 seconds after the flame goes out. That is the safety device, not a fault.",
+		verify: true,
+		system: "Propane"
+	},
+	{
+		id: "disconnect",
+		name: "Battery disconnect",
+		pn: "513996-01",
+		application: "Intellitec. A Blue Sea ML-RBS is not a drop-in.",
+		notes: "Stuck solenoids on some late units were replaced under warranty. Confirm which switch is actually in the coach.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "seven-way",
+		name: "7-way cable",
+		pn: "513905",
+		application: "Siliconized 7-way on Classic and Globetrotter.",
+		notes: "A plug-only repair is a Pollak 7-way. Clean it every 90 days.",
+		verify: false,
+		system: "Electrical"
+	},
+	{
+		id: "heater-board",
+		name: "Suburban tank water-heater board",
+		pn: "520814",
+		application: "SW-6/10/12/16 DSI boards. Not the tankless ST or IW60.",
+		notes: "Match the model on the heater. Electrode and limit are separate parts.",
+		verify: true,
+		system: "Water heater"
+	},
+	{
+		id: "st65",
+		name: "Suburban ST-65RL tankless",
+		pn: "690828-01",
+		application: "Suburban ST-65RL tankless on a 2025 Globetrotter. Not the IW60.",
+		notes: "ST codes E0–EC are not the IW60 codes. The spec table says 0.7 GPM. The owner page, and the 2027 Globetrotter text, say 0.4 GPM. Manual ECO reset before a service call. Descale kit 521163.",
+		verify: true,
+		system: "Water heater"
+	},
+	{
+		id: "iw60",
+		name: "Suburban IW60 tankless parts",
+		pn: "521135",
+		application: "Only where an IW60 is fitted. A 2025 Globetrotter is more often an ST-65RL. Read the heater label.",
+		notes: "Read the heater label. The service table says replace module 233232 when the valve plug reads 0 V, or gas valve 161248. Flame sense on an IW60 is 20–30 µA. The same E-number is a different fault than on an ST. E8 is in the troubleshooting table, not the code table. Gas-valve work is for a qualified tech.",
+		verify: true,
+		system: "Water heater"
+	},
+	{
+		id: "furnace-pn",
+		name: "Dometic furnace and service parts",
+		pn: "690732-02",
+		application: "30,000 BTU furnace on a 2025 Globetrotter. The board number owners use is for a DFMD30141. 690732-02 is the furnace assembly. Verify the model plate.",
+		notes: "Aftermarket board 31501MC. Mount plate 33053. On a DF only, 4 flashes is about 16–17 V and 5 flashes is about 8–9 V. Older AFMD boards do not have those two codes. Hard lockout: thermostat off for 10 seconds, then on, up to 3 times if the LP line has air. Verify the model plate before you order a board.",
+		verify: true,
+		system: "Furnace"
+	},
+	{
+		id: "alde-boiler",
+		name: "Alde Compact 3030 Plus",
+		pn: "602984",
+		application: "2026 Classic. 4900241 is the 3030 / 3030 Plus boiler pump. It may not be listed as its own line.",
+		notes: "3020-827 is the Alde Flow booster, only if that kit is fitted. 2928420 is an older in-tank pump, not this one.",
+		verify: true,
+		system: "Alde"
+	},
+	{
+		id: "fan",
+		name: "Roof fan",
+		pn: "514039",
+		application: "MaxxFan Dome Plus on both lines.",
+		notes: "N and NX network fans on a 2026 Classic are recall 26V-401. Do not buy a board for those. The dealer does the remedy.",
+		verify: true,
+		system: "Body"
+	},
+	{
+		id: "latches",
+		name: "Door and compartment latches",
+		pn: "383017-02",
+		application: "Entry, screen, and compartment latches. Read the old latch.",
+		notes: "Window latches 382367-01/-02. Latch spring 382356. Main door hinges 381552-03/-04. Screen hinges 381531-01/-02. Gas springs 381067-09 (90 lb) and 382525-04 (10 lb). Read the force rating on the old strut.",
+		verify: true,
+		system: "Body"
+	},
+	{
+		id: "power-hub",
+		name: "Power hub (recall)",
+		pn: "514417-1 / 514417-3",
+		application: "2025 Classic hubs covered by recall 24V-664.",
+		notes: "The dealer replaces these free. Do not buy one to fix the recall yourself.",
+		verify: true,
+		system: "Electrical"
+	},
+	{
+		id: "door-gasket",
+		name: "Screen and baggage seals",
+		pn: "382130",
+		application: "Screen and baggage seals on a Globetrotter entry door.",
+		notes: "About 20 ft of 365232 per door. 365232 replaces the no-longer-available 365045.",
+		verify: false,
+		system: "Body"
+	},
+	{
+		id: "tool-torque",
+		name: "Torque wrench",
+		pn: "To 150 ft-lb",
+		application: "Tires and wheels",
+		notes: "1/2 in drive, rated to about 150 ft-lb. Lug nuts are 110 ft-lb on aluminum and 100 on the steel spare. Star pattern. Recheck at 5, 10, 25, and 50 miles. Wind it back to zero for storage. A ProPride hitch-bar bolt needs a wrench that goes to at least 200 ft-lb.",
+		verify: false,
+		tool: true,
+		system: "Tires and wheels"
+	},
+	{
+		id: "tool-socket",
+		name: "Lug socket and breaker bar",
+		pn: "13/16 in",
+		application: "Tires and wheels",
+		notes: "1/2 in drive breaker bar, a short 3–6 in extension, and a 6-point deep thin-wall socket. Usually 13/16 in (21 mm). Some nuts are 3/4 in (19 mm). Recessed alloy nuts often will not take a common cross wrench. Test-fit before a trip. Carry a cross wrench too. The manuals list one.",
+		verify: false,
+		tool: true,
+		system: "Tires and wheels"
+	},
+	{
+		id: "tool-jack",
+		name: "Jack stands, block, gauge, compressor",
+		pn: "Rated stands",
+		application: "Tires and wheels",
+		notes: "Jack only at the marked JACK point on the frame. Never on the axle. A leveling block under the good tire lifts a flat clear of the ground on a tandem. Carry a quality gauge and a compressor that can reach your max cold pressure. Chocks, a warning triangle, and a hi-vis vest. The spare carrier, curbside on the A-frame, holds only an undamaged tire of the specified size.",
+		verify: false,
+		tool: true,
+		system: "Tires and wheels"
+	},
+	{
+		id: "tool-tpms",
+		name: "TPMS",
+		pn: "No Airstream number",
+		application: "Tires and wheels",
+		notes: "Tire pressure and temperature sensors. The guide lists them as a carry item. Cold-set the placard pressure before you rely on the sensors.",
+		verify: false,
+		tool: true,
+		system: "Tires and wheels"
+	},
+	{
+		id: "tool-hub",
+		name: "Spindle socket and grease gun",
+		pn: "1-7/16 in",
+		application: "Axles and brakes",
+		notes: "6- or 12-point socket for the Nev-R-Lube spindle nut, set to 145–155 ft-lb. Airstream wants a Dexter technician on hubs. Manual grease gun only. Dexter says no pneumatic gun. Wheel-bearing grease for serviceable hubs.",
+		verify: false,
+		tool: true,
+		system: "Axles and brakes"
+	},
+	{
+		id: "tool-brake",
+		name: "Brake adjusting tool",
+		pn: "Star wheel",
+		application: "Axles and brakes",
+		notes: "For manual star-wheel adjustment on brakes that are not self-adjusting. A clamp ammeter (about 3 A per magnet) is the field check.",
+		verify: false,
+		tool: true,
+		system: "Axles and brakes"
+	},
+	{
+		id: "tool-hitch",
+		name: "Hitch pin, clips, and ball lube",
+		pn: "Spare pin",
+		application: "Hitch",
+		notes: "Spare hitch pin, cotter or clips, and the weight-distribution brackets. Lube the ball the way the hitch maker says. Hensley owners carry a spare zerk. Stabilizer bolts on 2019–2020 coaches were a 3/4 in (19 mm) socket — confirm on yours.",
+		verify: false,
+		tool: true,
+		system: "Hitch"
+	},
+	{
+		id: "tool-fuses",
+		name: "Spare fuses",
+		pn: "Match the panel",
+		application: "Electrical",
+		notes: "Two or three of each ATC rating in the 12 V panel. Same type and amperage only. A fuse that blows again is a stop. Classic solar-port fuse is 15 A in the battery box. Globetrotter is 30 A. Some vent fans use a small glass fuse (about 4 A) and some jacks about 30 A. Look before you buy a handful.",
+		verify: false,
+		tool: true,
+		system: "Electrical"
+	},
+	{
+		id: "tool-meter",
+		name: "Multimeter, crimper, and Deoxit",
+		pn: "12 V diagnosis",
+		application: "Electrical",
+		notes: "Voltmeter, wire stripper, butt splices, crimper, electrical tape, and Deoxit for corroded pins. A clamp ammeter belongs with the brake check.",
+		verify: false,
+		tool: true,
+		system: "Electrical"
+	},
+	{
+		id: "tool-shore",
+		name: "Shore cord, adapters, and EMS",
+		pn: "30 A and 50 A",
+		application: "Electrical",
+		notes: "The manuals list the cord and a dogbone. Carry 50-to-30 and 30-to-15. An EMS or surge protector is the recommended extra. Let it finish its delay before you turn loads on.",
+		verify: false,
+		tool: true,
+		system: "Electrical"
+	},
+	{
+		id: "tool-water",
+		name: "Water hoses, sewer hose, and blow-out adapter",
+		pn: "Two 25 ft hoses",
+		application: "Water",
+		notes: "Drinking-water hoses, a Y, washers, Teflon tape, and an inline filter. Sewer hose with a clamp and a spare drain cap. A 15/16 in socket if you might pull the heater drain plug. A regulated air fitting for blow-out winterizing. Do not exceed the inlet pressure in your manual.",
+		verify: false,
+		tool: true,
+		system: "Water"
+	},
+	{
+		id: "tool-lp",
+		name: "LP pigtails, wrenches, and a manometer",
+		pn: "About 11 in. WC",
+		application: "Propane",
+		notes: "A spare pair of pigtail hoses and the wrenches. Soapy water only for a leak search, never a flame. A U-tube or digital manometer checks the regulator at about 11 in. water column. Lock-up should be 14 or under.",
+		verify: false,
+		tool: true,
+		system: "Propane"
+	},
+	{
+		id: "tool-anode-socket",
+		name: "Anode socket",
+		pn: "1-1/16 in",
+		application: "Water heater",
+		notes: "For the Suburban tank anode. Tankless heaters do not have one.",
+		verify: false,
+		tool: true,
+		system: "Water heater"
+	},
+	{
+		id: "tool-drill",
+		name: "Cordless drill and bits",
+		pn: "Driver and twist bits",
+		application: "General",
+		notes: "A compact 12 V or 18 V drill, Phillips, flat, and square driver bits, a few twist bits, and a charged spare battery. Most interior screws do not need an impact driver.",
+		verify: false,
+		tool: true,
+		system: "General"
+	},
+	{
+		id: "tool-ratchets",
+		name: "3/8 and 1/2 in ratchets",
+		pn: "One of each",
+		application: "General",
+		notes: "A 3/8 in ratchet for everyday fasteners, and a 1/2 in ratchet for the lug socket and heavier frame bolts. A short extension for each drive.",
+		verify: false,
+		tool: true,
+		system: "General"
+	},
+	{
+		id: "tool-sockets",
+		name: "Socket set",
+		pn: "1/4 and 3/8 in drive",
+		application: "General",
+		notes: "SAE and metric, 6-point, shallow and deep. A short extension and a universal joint. The 1/2 in thin-wall lug socket stays with the wheel tools. Test-fit before a trip. Sizes on one coach are not the next coach’s.",
+		verify: false,
+		tool: true,
+		system: "General"
+	},
+	{
+		id: "tool-wrenches",
+		name: "Wrenches and screwdrivers",
+		pn: "SAE and metric",
+		application: "General",
+		notes: "Combination wrenches in 7/16, 1/2, 9/16, 5/8, and 3/4 in, plus 10 and 13 mm. One adjustable wrench. #2 Phillips, a flat blade, and a stubby. Some 2019–2020 stabilizer bolts are 3/4 in (19 mm). Confirm on yours.",
+		verify: false,
+		tool: true,
+		system: "General"
+	},
+	{
+		id: "tool-pliers",
+		name: "Pliers, hex keys, and cutters",
+		pn: "SAE Allen, T25, T30",
+		application: "General",
+		notes: "Slip-joint pliers, needle-nose, channel locks, and side cutters. A SAE Allen set. T25 and T30 cover a lot of appliance and interior fasteners. A nylon wedge for trim, so the aluminum is not pried with a screwdriver.",
+		verify: false,
+		tool: true,
+		system: "General"
+	},
+	{
+		id: "tool-rivet",
+		name: "Rivet tool",
+		pn: "3/16 in rivets",
+		application: "Body",
+		notes: "Pop-rivet tool and 3/16 in aluminum rivets, grip 1/8–1/4 in, including large-flange rivets for the belly pan. See the Olympic numbers on the rivet card before you buy a box for the shell.",
+		verify: false,
+		tool: true,
+		system: "Body"
+	},
+	{
+		id: "tool-seal",
+		name: "Sealant tools and the chemical kit",
+		pn: "Caulk gun",
+		application: "Body",
+		notes: "Plastic putty knives and a caulk gun, so you do not scratch clear coat. Carry Teflon, butyl, electrical, silicone, and masking tape, zip ties, threadlocker, #8 wood screws, silicone spray, 303 Protectant, and gloves. Sealants from the guide: Vulkem 116 or TremPro 626, TremPro 635, Sikaflex 221, Parbond, AdSeal, Acryl-R, or Captain Tolley’s. Chemicals: dry graphite, a little household oil, silicone grease, contact cleaner, dielectric grease, a clear-coat-safe wax, RV antifreeze, bleach for sanitizing, Truma tablets, and Alde glycol on a Classic.",
+		verify: false,
+		tool: true,
+		system: "Body"
+	},
+	{
+		id: "tool-moisture",
+		name: "Moisture meter",
+		pn: "Yearly floor check",
+		application: "Body",
+		notes: "Pin or pinless meter for the yearly floor check, and a hygrometer if you store the coach closed up. A soft spot is a stop until you find the water.",
+		verify: false,
+		tool: true,
+		system: "Body"
+	},
+	{
+		id: "tool-safety",
+		name: "Lights, alarm batteries, and a first-aid kit",
+		pn: "9 V, AA, AAA",
+		application: "Safety",
+		notes: "Spare batteries for the smoke and CO alarms, a flashlight, a headlamp, and a first-aid kit. The manuals list a flashlight and first aid with the motoring gear.",
+		verify: false,
+		tool: true,
+		system: "Safety"
+	},
+	{
+		id: "tool-docs",
+		name: "Manuals in the coach",
+		pn: "Your year",
+		application: "Docs",
+		notes: "The owner’s manual for your year and model, the Dexter manual, and the appliance manuals. The paper book and this app both start there.",
+		verify: false,
+		tool: true,
+		system: "Docs"
+	},
+	{
+		id: "tool-spares",
+		name: "Small spares worth carrying",
+		pn: "Wear items",
+		application: "Spares",
+		notes: "The guide’s short list: a 7-way plug, water-strainer bowl and O-ring, pump check valve, city-water regulator, Valterra vacuum breaker, dump-valve seals, an A/C capacitor of the matching µF, a Suburban anode if you have a tank heater, LED fixtures by the Airstream number, and a breakaway pin. Skip bulk chemicals, a spare pump, and other heavy parts an RV dealer can supply.",
+		verify: false,
+		tool: true,
+		system: "Spares"
+	}
+], ...catalog];
+var curatedById = new Map(parts.map((p) => [p.id, p]));
+var bookLookup = null;
+function partById(id) {
+	return curatedById.get(id) ?? bookLookup?.(id);
+}
+//#endregion
+export { parts as n, partById as t };

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.*.local
+artifacts/
+attachments/
+screenshots/
+public/rivetcare-book.zip
+.grok/*
+!.grok/app-env.json
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,404 @@
+[nitro:vercel] ℹ Using nodejs22.x runtime.
+[nitro:vercel] ℹ Using web entry format.
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 1945 modules transformed.
+rendering chunks...
+computing gzip size...
+.vercel/output/static/assets/styles-BldhSEGM.css            40.02 kB │ gzip:   8.58 kB
+.vercel/output/static/assets/check-Ba4xkbMb.js               0.12 kB │ gzip:   0.14 kB
+.vercel/output/static/assets/support-BaQsquT8.js             0.27 kB │ gzip:   0.21 kB
+.vercel/output/static/assets/flame-DjDPktfG.js               0.27 kB │ gzip:   0.22 kB
+.vercel/output/static/assets/printer-C1om8vaA.js             0.31 kB │ gzip:   0.23 kB
+.vercel/output/static/assets/scoped-copy-BoYJh2ib.js         0.41 kB │ gzip:   0.27 kB
+.vercel/output/static/assets/privacy-Dk65vE9a.js             0.70 kB │ gzip:   0.44 kB
+.vercel/output/static/assets/rolldown-runtime-hePW80VL.js    0.71 kB │ gzip:   0.42 kB
+.vercel/output/static/assets/public-page-CrxR_JgG.js         0.82 kB │ gzip:   0.38 kB
+.vercel/output/static/assets/year-scope-Cnlg5XII.js          1.19 kB │ gzip:   0.65 kB
+.vercel/output/static/assets/createLucideIcon-BHliA9WE.js    1.22 kB │ gzip:   0.70 kB
+.vercel/output/static/assets/step-mark-DstrbCbq.js           2.18 kB │ gzip:   1.15 kB
+.vercel/output/static/assets/notes-view-6VPCPsQy.js          2.80 kB │ gzip:   1.15 kB
+.vercel/output/static/assets/words-DauiS9qc.js               2.85 kB │ gzip:   1.15 kB
+.vercel/output/static/assets/supplies-view-BJoKWi8s.js       2.88 kB │ gzip:   1.23 kB
+.vercel/output/static/assets/privacy-view-CTHhyJ9r.js        3.06 kB │ gzip:   1.33 kB
+.vercel/output/static/assets/manuals-view-CAVEjg_Q.js        3.41 kB │ gzip:   1.50 kB
+.vercel/output/static/assets/support-view-C2c2Rn0_.js        3.86 kB │ gzip:   1.72 kB
+.vercel/output/static/assets/causes-COCFkAKB.js              4.08 kB │ gzip:   1.49 kB
+.vercel/output/static/assets/graph-BfxKKYpr.js               4.31 kB │ gzip:   1.56 kB
+.vercel/output/static/assets/print-view-gEm7DT13.js          4.90 kB │ gzip:   1.80 kB
+.vercel/output/static/assets/records-view-DOKa0qs9.js        5.08 kB │ gzip:   1.95 kB
+.vercel/output/static/assets/table-view-DeYhjJ5F.js          5.47 kB │ gzip:   2.19 kB
+.vercel/output/static/assets/service-view-D96hqttI.js        7.59 kB │ gzip:   2.74 kB
+.vercel/output/static/assets/shop-sheet-a3bOkdJl.js          7.60 kB │ gzip:   2.43 kB
+.vercel/output/static/assets/legal-copy-B2n8W4DI.js          8.58 kB │ gzip:   2.38 kB
+.vercel/output/static/assets/figure-view-Dt9_vjAZ.js         8.81 kB │ gzip:   3.02 kB
+.vercel/output/static/assets/checklists-D0-sG1_C.js          9.02 kB │ gzip:   3.86 kB
+.vercel/output/static/assets/search-C12kLdIT.js              9.42 kB │ gzip:   3.61 kB
+.vercel/output/static/assets/parts-view-mTNQTzh4.js         10.18 kB │ gzip:   3.65 kB
+.vercel/output/static/assets/weights-BQRbdkjI.js            11.11 kB │ gzip:   4.22 kB
+.vercel/output/static/assets/flow-view-B50JqM4W.js          13.78 kB │ gzip:   4.87 kB
+.vercel/output/static/assets/level-view-DC_5Vy4i.js         14.74 kB │ gzip:   4.81 kB
+.vercel/output/static/assets/tires-view-D9ReTBJv.js         18.49 kB │ gzip:   5.68 kB
+.vercel/output/static/assets/fix-view-DiVrbEHX.js           21.95 kB │ gzip:   6.61 kB
+.vercel/output/static/assets/backup-view-DGbbQehf.js        23.15 kB │ gzip:   8.46 kB
+.vercel/output/static/assets/figures-big7b-5F.js            25.43 kB │ gzip:   6.11 kB
+.vercel/output/static/assets/weights-view-Yvo0AM9F.js       27.29 kB │ gzip:   7.75 kB
+.vercel/output/static/assets/parts-HCFoYPwB.js              28.48 kB │ gzip:  10.94 kB
+.vercel/output/static/assets/care-view-DEmFQtur.js          37.64 kB │ gzip:  11.06 kB
+.vercel/output/static/assets/more-view-TatgUPEg.js          43.51 kB │ gzip:  13.13 kB
+.vercel/output/static/assets/procedures-r4RmUbv8.js         46.51 kB │ gzip:  17.43 kB
+.vercel/output/static/assets/service-DlIVggov.js            48.58 kB │ gzip:  11.62 kB
+.vercel/output/static/assets/coach-BnA09JJd.js              60.32 kB │ gzip:  17.52 kB
+.vercel/output/static/assets/store-DNOynj3X.js              61.07 kB │ gzip:  19.94 kB
+.vercel/output/static/assets/manuals-CmJyL1Lb.js            62.39 kB │ gzip:   7.20 kB
+.vercel/output/static/assets/flows-k3HvRICC.js              64.79 kB │ gzip:  20.97 kB
+.vercel/output/static/assets/codes-4k5_0-Ln.js              93.44 kB │ gzip:  26.74 kB
+.vercel/output/static/assets/routes-BGXxP5N_.js            124.56 kB │ gzip:  37.08 kB
+.vercel/output/static/assets/symptoms-BRsQYroF.js          429.72 kB │ gzip: 137.25 kB
+.vercel/output/static/assets/index-CBisF3C2.js             435.59 kB │ gzip: 137.62 kB
+.vercel/output/static/assets/zips-Bx2Hj0Hf.js              959.51 kB │ gzip: 323.73 kB
+
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.62s
+vite v8.3.4 building ssr environment for production...
+transforming...
+✓ 166 modules transformed.
+rendering chunks...
+computing gzip size...
+node_modules/.nitro/vite/services/ssr/assets/styles-BldhSEGM.css                        40.02 kB │ gzip:   8.58 kB
+node_modules/.nitro/vite/services/ssr/assets/start-DiOeq3CI.js                           0.15 kB │ gzip:   0.13 kB
+node_modules/.nitro/vite/services/ssr/assets/empty-plugin-adapters-BhJJRpO2.js           0.23 kB │ gzip:   0.16 kB
+node_modules/.nitro/vite/services/ssr/assets/rolldown-runtime-D7D4PA-g.js                0.36 kB │ gzip:   0.25 kB
+node_modules/.nitro/vite/services/ssr/assets/support-NpN3A3s4.js                         0.43 kB │ gzip:   0.28 kB
+node_modules/.nitro/vite/services/ssr/assets/scoped-copy-Cx2pNeOk.js                     0.74 kB │ gzip:   0.41 kB
+node_modules/.nitro/vite/services/ssr/assets/privacy-Cy7KanY_.js                         0.94 kB │ gzip:   0.53 kB
+node_modules/.nitro/vite/services/ssr/assets/public-page-DjnyM1ue.js                     1.21 kB │ gzip:   0.48 kB
+node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-qrO9ciF0.js      1.26 kB │ gzip:   0.52 kB
+node_modules/.nitro/vite/services/ssr/assets/year-scope-abgC83Lw.js                      2.40 kB │ gzip:   1.08 kB
+node_modules/.nitro/vite/services/ssr/assets/step-mark-BxG3L6bU.js                       3.01 kB │ gzip:   1.42 kB
+node_modules/.nitro/vite/services/ssr/assets/supplies-view-CyZquaOv.js                   4.00 kB │ gzip:   1.47 kB
+node_modules/.nitro/vite/services/ssr/assets/notes-view-6lY_SS3M.js                      4.36 kB │ gzip:   1.42 kB
+node_modules/.nitro/vite/services/ssr/assets/privacy-view-D5Mn_cLK.js                    4.78 kB │ gzip:   1.75 kB
+node_modules/.nitro/vite/services/ssr/assets/manuals-view-CMUbN7tu.js                    4.90 kB │ gzip:   1.80 kB
+node_modules/.nitro/vite/services/ssr/assets/words-CD5GbNH1.js                           5.11 kB │ gzip:   1.84 kB
+node_modules/.nitro/vite/services/ssr/assets/causes-CnHDsgzr.js                          5.45 kB │ gzip:   1.76 kB
+node_modules/.nitro/vite/services/ssr/assets/support-view-CmLpRHKA.js                    5.84 kB │ gzip:   2.18 kB
+node_modules/.nitro/vite/services/ssr/assets/graph-BL3hw7ba.js                           6.28 kB │ gzip:   1.83 kB
+node_modules/.nitro/vite/services/ssr/assets/records-view-CYCH79fs.js                    7.31 kB │ gzip:   2.19 kB
+node_modules/.nitro/vite/services/ssr/assets/print-view-CMmQFtIr.js                      7.34 kB │ gzip:   2.21 kB
+node_modules/.nitro/vite/services/ssr/assets/table-view-C_KldGH5.js                      8.39 kB │ gzip:   2.78 kB
+node_modules/.nitro/vite/services/ssr/assets/legal-copy-HLcWwbVZ.js                     10.36 kB │ gzip:   2.57 kB
+node_modules/.nitro/vite/services/ssr/assets/checklists-C7X8n_LL.js                     11.04 kB │ gzip:   4.05 kB
+node_modules/.nitro/vite/services/ssr/assets/service-view-CEcwgY_h.js                   11.41 kB │ gzip:   3.39 kB
+node_modules/.nitro/vite/services/ssr/assets/shop-sheet-DUyvXrLM.js                     11.65 kB │ gzip:   2.97 kB
+node_modules/.nitro/vite/services/ssr/assets/figure-view-DMLHB3W7.js                    12.31 kB │ gzip:   3.55 kB
+node_modules/.nitro/vite/services/ssr/assets/search-BjR82i3B.js                         16.13 kB │ gzip:   4.91 kB
+node_modules/.nitro/vite/services/ssr/assets/parts-view-CN_KRU1B.js                     16.25 kB │ gzip:   4.75 kB
+node_modules/.nitro/vite/services/ssr/assets/weights-DTEOTqeP.js                        19.74 kB │ gzip:   6.08 kB
+node_modules/.nitro/vite/services/ssr/assets/router-DrBUOS9N.js                         20.16 kB │ gzip:   6.66 kB
+node_modules/.nitro/vite/services/ssr/assets/flow-view-C6nCYyEh.js                      21.39 kB │ gzip:   6.17 kB
+node_modules/.nitro/vite/services/ssr/assets/level-view-CZ8DZ1QD.js                     23.61 kB │ gzip:   6.39 kB
+node_modules/.nitro/vite/services/ssr/assets/fix-view-wfMC69kV.js                       30.04 kB │ gzip:   7.35 kB
+node_modules/.nitro/vite/services/ssr/assets/tires-view-BjBkuol3.js                     30.18 kB │ gzip:   7.51 kB
+node_modules/.nitro/vite/services/ssr/assets/parts-BQFqy33o.js                          31.62 kB │ gzip:  11.22 kB
+node_modules/.nitro/vite/services/ssr/assets/figures-oVlC0RQ2.js                        31.95 kB │ gzip:   6.51 kB
+node_modules/.nitro/vite/services/ssr/assets/backup-view-C0XXLFpH.js                    37.45 kB │ gzip:  11.11 kB
+node_modules/.nitro/vite/services/ssr/assets/weights-view-CKlEy7dY.js                   41.62 kB │ gzip:   9.77 kB
+node_modules/.nitro/vite/services/ssr/assets/procedures-ClYWmZUo.js                     49.35 kB │ gzip:  17.67 kB
+node_modules/.nitro/vite/services/ssr/assets/service-DKXVEeby.js                        56.23 kB │ gzip:  12.33 kB
+node_modules/.nitro/vite/services/ssr/assets/care-view-D1m-53tr.js                      57.04 kB │ gzip:  14.19 kB
+node_modules/.nitro/vite/services/ssr/assets/more-view-Bnoj4bcT.js                      64.77 kB │ gzip:  15.98 kB
+node_modules/.nitro/vite/services/ssr/assets/manuals-DbozeEkY.js                        69.28 kB │ gzip:   7.63 kB
+node_modules/.nitro/vite/services/ssr/index.js                                          69.71 kB │ gzip:  17.72 kB
+node_modules/.nitro/vite/services/ssr/assets/coach-KEaWY9VI.js                          75.43 kB │ gzip:  19.56 kB
+node_modules/.nitro/vite/services/ssr/assets/flows-BEXVNR5W.js                          77.27 kB │ gzip:  21.84 kB
+node_modules/.nitro/vite/services/ssr/assets/codes-DIyD6LV_.js                         103.53 kB │ gzip:  27.75 kB
+node_modules/.nitro/vite/services/ssr/assets/store-C3gr-Jyz.js                         110.49 kB │ gzip:  29.08 kB
+node_modules/.nitro/vite/services/ssr/assets/routes-BL7pyKhp.js                        138.56 kB │ gzip:  34.59 kB
+node_modules/.nitro/vite/services/ssr/assets/symptoms-BuRfv0Qj.js                      446.50 kB │ gzip: 138.56 kB
+node_modules/.nitro/vite/services/ssr/assets/zips-D1gHArEb.js                        1,201.81 kB │ gzip: 334.43 kB
+
+✓ built in 672ms
+
+[nitro] ◐ Building [Nitro] (preset: vercel, compatibility: 2026-11-09)
+[nitro] ✔ Generated public .vercel/output/static
+vite v8.3.4 building nitro environment for production...
+`output.codeSplitting.groups[0].name` is a function. Set `output.codeSplitting.groups[0].debugName` so the bundler timing report can identify this group.
+transforming...
+✓ 1938 modules transformed.
+rendering chunks...
+computing gzip size...
+.vercel/output/functions/__server.func/_ssr/start-DiOeq3CI.mjs                      0.15 kB │ gzip:   0.13 kB
+.vercel/output/functions/__server.func/_ssr/empty-plugin-adapters-BhJJRpO2.mjs      0.24 kB │ gzip:   0.17 kB
+.vercel/output/functions/__server.func/_ssr/rolldown-runtime-D7D4PA-g.mjs           0.42 kB │ gzip:   0.29 kB
+.vercel/output/functions/__server.func/_libs/clsx.mjs                               0.56 kB │ gzip:   0.31 kB
+.vercel/output/functions/__server.func/_ssr/support-NpN3A3s4.mjs                    0.61 kB │ gzip:   0.37 kB
+.vercel/output/functions/__server.func/_chunks/ssr-renderer.mjs                     0.98 kB │ gzip:   0.49 kB
+.vercel/output/functions/__server.func/_ssr/scoped-copy-Cx2pNeOk.mjs                1.00 kB │ gzip:   0.49 kB
+.vercel/output/functions/__server.func/_ssr/privacy-Cy7KanY_.mjs                    1.18 kB │ gzip:   0.61 kB
+.vercel/output/functions/__server.func/_tanstack-start-manifest_v-qrO9ciF0.mjs      1.33 kB │ gzip:   0.55 kB
+.vercel/output/functions/__server.func/_ssr/public-page-DjnyM1ue.mjs                1.54 kB │ gzip:   0.56 kB
+.vercel/output/functions/__server.func/_runtime.mjs                                 1.58 kB │ gzip:   0.74 kB
+.vercel/output/functions/__server.func/_libs/zustand.mjs                            1.93 kB │ gzip:   0.73 kB
+.vercel/output/functions/__server.func/_ssr/year-scope-abgC83Lw.mjs                 2.46 kB │ gzip:   1.12 kB
+.vercel/output/functions/__server.func/_ssr/step-mark-BxG3L6bU.mjs                  3.19 kB │ gzip:   1.49 kB
+.vercel/output/functions/__server.func/_ssr/supplies-view-CyZquaOv.mjs              4.61 kB │ gzip:   1.59 kB
+.vercel/output/functions/__server.func/_ssr/notes-view-6lY_SS3M.mjs                 5.16 kB │ gzip:   1.55 kB
+.vercel/output/functions/__server.func/_ssr/words-CD5GbNH1.mjs                      5.17 kB │ gzip:   1.88 kB
+.vercel/output/functions/__server.func/_ssr/privacy-view-D5Mn_cLK.mjs               5.26 kB │ gzip:   1.85 kB
+.vercel/output/functions/__server.func/_ssr/causes-CnHDsgzr.mjs                     5.51 kB │ gzip:   1.80 kB
+.vercel/output/functions/__server.func/_ssr/manuals-view-CMUbN7tu.mjs               5.68 kB │ gzip:   1.93 kB
+.vercel/output/functions/__server.func/_ssr/graph-BL3hw7ba.mjs                      6.34 kB │ gzip:   1.87 kB
+.vercel/output/functions/__server.func/_ssr/support-view-CmLpRHKA.mjs               6.55 kB │ gzip:   2.31 kB
+.vercel/output/functions/__server.func/_ssr/records-view-CYCH79fs.mjs               8.46 kB │ gzip:   2.34 kB
+.vercel/output/functions/__server.func/_ssr/print-view-CMmQFtIr.mjs                 8.65 kB │ gzip:   2.34 kB
+.vercel/output/functions/__server.func/_ssr/table-view-C_KldGH5.mjs                 9.51 kB │ gzip:   2.92 kB
+.vercel/output/functions/__server.func/_libs/h3-v2+rou3.mjs                         9.85 kB │ gzip:   3.06 kB
+.vercel/output/functions/__server.func/_ssr/checklists-C7X8n_LL.mjs                11.10 kB │ gzip:   4.10 kB
+.vercel/output/functions/__server.func/_ssr/legal-copy-HLcWwbVZ.mjs                11.92 kB │ gzip:   2.69 kB
+.vercel/output/functions/__server.func/_libs/tanstack__history.mjs                 12.51 kB │ gzip:   3.71 kB
+.vercel/output/functions/__server.func/_ssr/service-view-CEcwgY_h.mjs              12.90 kB │ gzip:   3.53 kB
+.vercel/output/functions/__server.func/_ssr/shop-sheet-DUyvXrLM.mjs                13.23 kB │ gzip:   3.08 kB
+.vercel/output/functions/__server.func/_ssr/figure-view-DMLHB3W7.mjs               14.15 kB │ gzip:   3.68 kB
+.vercel/output/functions/__server.func/_ssr/search-BjR82i3B.mjs                    16.20 kB │ gzip:   4.94 kB
+.vercel/output/functions/__server.func/_ssr/parts-view-CN_KRU1B.mjs                18.11 kB │ gzip:   4.88 kB
+.vercel/output/functions/__server.func/_libs/lucide-react.mjs                      19.39 kB │ gzip:   4.52 kB
+.vercel/output/functions/__server.func/_ssr/weights-DTEOTqeP.mjs                   20.26 kB │ gzip:   6.15 kB
+.vercel/output/functions/__server.func/_ssr/router-DrBUOS9N.mjs                    20.28 kB │ gzip:   6.67 kB
+.vercel/output/functions/__server.func/_libs/h3+rou3+srvx.mjs                      22.62 kB │ gzip:   6.12 kB
+.vercel/output/functions/__server.func/_ssr/flow-view-C6nCYyEh.mjs                 23.63 kB │ gzip:   6.33 kB
+.vercel/output/functions/__server.func/_ssr/level-view-CZ8DZ1QD.mjs                26.12 kB │ gzip:   6.54 kB
+.vercel/output/functions/__server.func/_libs/@tanstack/router-core+[...].mjs       30.00 kB │ gzip:   8.02 kB
+.vercel/output/functions/__server.func/_ssr/parts-BQFqy33o.mjs                     31.68 kB │ gzip:  11.26 kB
+.vercel/output/functions/__server.func/_ssr/figures-oVlC0RQ2.mjs                   32.01 kB │ gzip:   6.55 kB
+.vercel/output/functions/__server.func/_ssr/tires-view-BjBkuol3.mjs                33.40 kB │ gzip:   7.67 kB
+.vercel/output/functions/__server.func/_ssr/fix-view-wfMC69kV.mjs                  34.25 kB │ gzip:   7.55 kB
+.vercel/output/functions/__server.func/_ssr/backup-view-C0XXLFpH.mjs               39.39 kB │ gzip:  11.23 kB
+.vercel/output/functions/__server.func/index.mjs                                   39.95 kB │ gzip:  12.33 kB
+.vercel/output/functions/__server.func/_ssr/weights-view-CKlEy7dY.mjs              45.24 kB │ gzip:   9.96 kB
+.vercel/output/functions/__server.func/_ssr/procedures-ClYWmZUo.mjs                49.41 kB │ gzip:  17.71 kB
+.vercel/output/functions/__server.func/_ssr/service-DKXVEeby.mjs                   56.25 kB │ gzip:  12.35 kB
+.vercel/output/functions/__server.func/_ssr/care-view-D1m-53tr.mjs                 63.75 kB │ gzip:  14.59 kB
+.vercel/output/functions/__server.func/_ssr/ssr.mjs                                67.73 kB │ gzip:  17.61 kB
+.vercel/output/functions/__server.func/_ssr/manuals-DbozeEkY.mjs                   69.33 kB │ gzip:   7.67 kB
+.vercel/output/functions/__server.func/_ssr/more-view-Bnoj4bcT.mjs                 72.43 kB │ gzip:  16.30 kB
+.vercel/output/functions/__server.func/_ssr/coach-KEaWY9VI.mjs                     75.26 kB │ gzip:  19.57 kB
+.vercel/output/functions/__server.func/_ssr/flows-BEXVNR5W.mjs                     77.33 kB │ gzip:  21.89 kB
+.vercel/output/functions/__server.func/_libs/tailwind-merge.mjs                    88.93 kB │ gzip:  15.71 kB
+.vercel/output/functions/__server.func/_ssr/codes-DIyD6LV_.mjs                    103.54 kB │ gzip:  27.76 kB
+.vercel/output/functions/__server.func/_ssr/store-C3gr-Jyz.mjs                    110.17 kB │ gzip:  29.02 kB
+.vercel/output/functions/__server.func/_ssr/routes-BL7pyKhp.mjs                   149.11 kB │ gzip:  35.11 kB
+.vercel/output/functions/__server.func/_libs/zod.mjs                              168.89 kB │ gzip:  37.72 kB
+.vercel/output/functions/__server.func/_ssr/symptoms-BuRfv0Qj.mjs                 446.50 kB │ gzip: 138.56 kB
+.vercel/output/functions/__server.func/_libs/@tanstack/react-router+[...].mjs     826.61 kB │ gzip: 176.67 kB
+.vercel/output/functions/__server.func/_ssr/zips-D1gHArEb.mjs                   1,201.86 kB │ gzip: 334.50 kB
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/index.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/index.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/utils.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/utils.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/useRouterState.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/useRouterState.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/link.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/link.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/CatchBoundary.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/Matches.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/Matches.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/RouterProvider.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/RouterProvider.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/useBlocker.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/useBlocker.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/Asset.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/Asset.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/HeadContent.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/HeadContent.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/Transitioner.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/Transitioner.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/routerContext.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/routerContext.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/nonRouteComponentContext.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/nonRouteComponentContext.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/ClientOnly.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/ClientOnly.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/useRouter.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/useRouter.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/useLocation.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/useLocation.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/useMatch.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/useMatch.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/useNavigate.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/useNavigate.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/Match.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/Match.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+[33m[MODULE_LEVEL_DIRECTIVE] [0mThe semantics of the module level directive "use client" in "../../../../node_modules/@tanstack/react-router/dist/esm/matchContext.js" may not be preserved when bundling.
+   [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m ../../../../node_modules/@tanstack/react-router/dist/esm/matchContext.js:1:1 [38;5;246m][0m
+   [38;5;246m│[0m
+ [38;5;246m1 │[0m "use client";
+ [38;5;240m  │[0m ──────┬──────  
+ [38;5;240m  │[0m       ╰──────── module level directive may not be preserved
+ [38;5;240m  │[0m 
+ [38;5;240m  │[0m [38;5;115mHelp[0m: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+[38;5;246m───╯[0m
+
+✓ built in 755ms
+ℹ Generated .vercel/output/nitro.json
+
+[nitro] ✔ You can preview this build using npx vite preview
+[nitro] ✔ You can deploy this build using npx nitro deploy --prebuilt

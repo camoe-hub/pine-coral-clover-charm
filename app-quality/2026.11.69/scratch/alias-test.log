@@ -1,0 +1,327 @@
+TAP version 13
+# Subtest: coach fitment
+    # Subtest: does not put Alde on a Flying Cloud
+    ok 1 - does not put Alde on a Flying Cloud
+      ---
+      duration_ms: 0.937166
+      type: 'test'
+      ...
+    # Subtest: keeps the tankless water heater on a Globetrotter
+    ok 2 - keeps the tankless water heater on a Globetrotter
+      ---
+      duration_ms: 0.381188
+      type: 'test'
+      ...
+    # Subtest: keeps Classic TPMS on a 2027 Classic only
+    ok 3 - keeps Classic TPMS on a 2027 Classic only
+      ---
+      duration_ms: 0.176023
+      type: 'test'
+      ...
+    # Subtest: shows TST only on a Classic, including when the year is unset
+    ok 4 - shows TST only on a Classic, including when the year is unset
+      ---
+      duration_ms: 0.11044
+      type: 'test'
+      ...
+    # Subtest: does not show TireMinder or Progressive EMS on a named floor
+    ok 5 - does not show TireMinder or Progressive EMS on a named floor
+      ---
+      duration_ms: 0.178226
+      type: 'test'
+      ...
+    # Subtest: does not call a 2023 Classic an Alde 3030
+    ok 6 - does not call a 2023 Classic an Alde 3030
+      ---
+      duration_ms: 0.279086
+      type: 'test'
+      ...
+    # Subtest: does not call an unverified Classic boiler a 3030
+    ok 7 - does not call an unverified Classic boiler a 3030
+      ---
+      duration_ms: 0.499913
+      type: 'test'
+      ...
+    1..7
+ok 1 - coach fitment
+  ---
+  duration_ms: 3.520277
+  type: 'suite'
+  ...
+# Subtest: a damaged backup does not replace records
+    # Subtest: refuses a bad checksum and a newer file, and does not write before apply
+    ok 1 - refuses a bad checksum and a newer file, and does not write before apply
+      ---
+      duration_ms: 3.768164
+      type: 'test'
+      ...
+    1..1
+ok 2 - a damaged backup does not replace records
+  ---
+  duration_ms: 4.614309
+  type: 'suite'
+  ...
+# Subtest: backup name
+    # Subtest: writes RivetCare and still reads a SilverBullet file
+    ok 1 - writes RivetCare and still reads a SilverBullet file
+      ---
+      duration_ms: 2.320752
+      type: 'test'
+      ...
+    1..1
+ok 3 - backup name
+  ---
+  duration_ms: 2.457751
+  type: 'suite'
+  ...
+# Subtest: a restore does not wipe a coach the file does not contain
+    # Subtest: keeps a note saved after the preview
+    ok 1 - keeps a note saved after the preview
+      ---
+      duration_ms: 3.039312
+      type: 'test'
+      ...
+    # Subtest: still replaces a coach that is in the file
+    ok 2 - still replaces a coach that is in the file
+      ---
+      duration_ms: 0.492624
+      type: 'test'
+      ...
+    1..2
+ok 4 - a restore does not wipe a coach the file does not contain
+  ---
+  duration_ms: 3.710911
+  type: 'suite'
+  ...
+# Subtest: a photo delete stays on the coach that owned it
+    # Subtest: does not drop a photo another coach still uses, and does not clear a coach that was switched to
+    ok 1 - does not drop a photo another coach still uses, and does not clear a coach that was switched to
+      ---
+      duration_ms: 61.671215
+      type: 'test'
+      ...
+    # Subtest: does not delete a section photo another coach still uses
+    ok 2 - does not delete a section photo another coach still uses
+      ---
+      duration_ms: 61.074364
+      type: 'test'
+      ...
+    1..2
+ok 5 - a photo delete stays on the coach that owned it
+  ---
+  duration_ms: 123.116466
+  type: 'suite'
+  ...
+# Subtest: year-aware part numbers
+    # Subtest: does not offer the 2026 Classic axle on an older Classic
+    ok 1 - does not offer the 2026 Classic axle on an older Classic
+      ---
+      duration_ms: 2.870295
+      type: 'test'
+      ...
+    # Subtest: keeps that axle when the coach is the year the number belongs to
+    ok 2 - keeps that axle when the coach is the year the number belongs to
+      ---
+      duration_ms: 0.620369
+      type: 'test'
+      ...
+    # Subtest: does not offer the 2025 Globetrotter brake number on another year
+    ok 3 - does not offer the 2025 Globetrotter brake number on another year
+      ---
+      duration_ms: 3.351091
+      type: 'test'
+      ...
+    # Subtest: leaves the number alone when no year is set
+    ok 4 - leaves the number alone when no year is set
+      ---
+      duration_ms: 0.222234
+      type: 'test'
+      ...
+    # Subtest: keeps a floor-plan number that is not tied to a year
+    ok 5 - keeps a floor-plan number that is not tied to a year
+      ---
+      duration_ms: 1.688548
+      type: 'test'
+      ...
+    # Subtest: does not offer a number whose only stated use is another year
+    ok 6 - does not offer a number whose only stated use is another year
+      ---
+      duration_ms: 2.101967
+      type: 'test'
+      ...
+    # Subtest: withholds a part whose name or only stated use is another year
+    ok 7 - withholds a part whose name or only stated use is another year
+      ---
+      duration_ms: 1.205639
+      type: 'test'
+      ...
+    1..7
+ok 6 - year-aware part numbers
+  ---
+  duration_ms: 13.351464
+  type: 'suite'
+  ...
+# Subtest: restore snapshot
+    # Subtest: collects trailer, log, draft, and section photos once
+    ok 1 - collects trailer, log, draft, and section photos once
+      ---
+      duration_ms: 1.531899
+      type: 'test'
+      ...
+    # Subtest: accepts a readable book and rejects a cut-off one
+    ok 2 - accepts a readable book and rejects a cut-off one
+      ---
+      duration_ms: 0.282833
+      type: 'test'
+      ...
+    # Subtest: matches a snapshot only when the book, weights, and photo sizes match
+    ok 3 - matches a snapshot only when the book, weights, and photo sizes match
+      ---
+      duration_ms: 0.283658
+      type: 'test'
+      ...
+    1..3
+ok 7 - restore snapshot
+  ---
+  duration_ms: 3.226296
+  type: 'suite'
+  ...
+# Subtest: a step that does not name a source is guidance, not a factory fact
+ok 8 - a step that does not name a source is guidance, not a factory fact
+  ---
+  duration_ms: 1.500141
+  type: 'test'
+  ...
+# Subtest: owner wording stays an owner report even when a manual is named
+ok 9 - owner wording stays an owner report even when a manual is named
+  ---
+  duration_ms: 0.523304
+  type: 'test'
+  ...
+# Subtest: propane, shore power, brakes, and jacking stop; tires, structure, and weight caution
+ok 10 - propane, shore power, brakes, and jacking stop; tires, structure, and weight caution
+  ---
+  duration_ms: 0.331136
+  type: 'test'
+  ...
+# Subtest: schedule link
+    # Subtest: links one job title and refuses a title that is not a job
+    ok 1 - links one job title and refuses a title that is not a job
+      ---
+      duration_ms: 0.683038
+      type: 'test'
+      ...
+    # Subtest: moves the schedule only to a later service
+    ok 2 - moves the schedule only to a later service
+      ---
+      duration_ms: 0.663736
+      type: 'test'
+      ...
+    # Subtest: keeps the newest remaining record
+    ok 3 - keeps the newest remaining record
+      ---
+      duration_ms: 0.167042
+      type: 'test'
+      ...
+    # Subtest: follows the latest remaining service and leaves a hand-set date alone
+    ok 4 - follows the latest remaining service and leaves a hand-set date alone
+      ---
+      duration_ms: 0.237894
+      type: 'test'
+      ...
+    1..4
+ok 11 - schedule link
+  ---
+  duration_ms: 2.808291
+  type: 'suite'
+  ...
+# Subtest: editing a service date
+    # Subtest: does not move the schedule behind an older service that is still later
+    ok 1 - does not move the schedule behind an older service that is still later
+      ---
+      duration_ms: 1.594908
+      type: 'test'
+      ...
+    1..1
+ok 12 - editing a service date
+  ---
+  duration_ms: 1.724346
+  type: 'suite'
+  ...
+# Subtest: setup input
+    # Subtest: names a short VIN that uses I, O, or Q instead of saving it
+    ok 1 - names a short VIN that uses I, O, or Q instead of saving it
+      ---
+      duration_ms: 0.700868
+      type: 'test'
+      ...
+    # Subtest: does not save a mileage that is not a whole number from 0 to 1,000,000
+    ok 2 - does not save a mileage that is not a whole number from 0 to 1,000,000
+      ---
+      duration_ms: 0.987911
+      type: 'test'
+      ...
+    1..2
+ok 13 - setup input
+  ---
+  duration_ms: 2.684867
+  type: 'suite'
+  ...
+# Subtest: tire records
+    # Subtest: keeps an older single DOT and drops a bad wheel
+    ok 1 - keeps an older single DOT and drops a bad wheel
+      ---
+      duration_ms: 1.375239
+      type: 'test'
+      ...
+    # Subtest: names the oldest wheel, and the spare can be that wheel
+    ok 2 - names the oldest wheel, and the spare can be that wheel
+      ---
+      duration_ms: 0.597388
+      type: 'test'
+      ...
+    # Subtest: leaves the old home line alone when only one code is saved
+    ok 3 - leaves the old home line alone when only one code is saved
+      ---
+      duration_ms: 0.373267
+      type: 'test'
+      ...
+    # Subtest: follows the oldest DOT on the 5-year job
+    ok 4 - follows the oldest DOT on the 5-year job
+      ---
+      duration_ms: 0.324873
+      type: 'test'
+      ...
+    # Subtest: uses a rotation date for the 6-month side and does not hide an unmarked 10,000-mile job
+    ok 5 - uses a rotation date for the 6-month side and does not hide an unmarked 10,000-mile job
+      ---
+      duration_ms: 1.874629
+      type: 'test'
+      ...
+    # Subtest: treats 2/32 and a replace mark as the existing line, not a wear estimate
+    ok 6 - treats 2/32 and a replace mark as the existing line, not a wear estimate
+      ---
+      duration_ms: 0.293454
+      type: 'test'
+      ...
+    # Subtest: keeps one cold check per day and flags a reading more than 20% under the placard
+    ok 7 - keeps one cold check per day and flags a reading more than 20% under the placard
+      ---
+      duration_ms: 0.634176
+      type: 'test'
+      ...
+    1..7
+ok 14 - tire records
+  ---
+  duration_ms: 6.498033
+  type: 'suite'
+  ...
+1..14
+# tests 40
+# suites 11
+# pass 40
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6341.987634

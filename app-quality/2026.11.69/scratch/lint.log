@@ -1,0 +1,40 @@
+
+/workspace/app-quality/2026.11.69/scratch/src/scripts/pack-source.mjs
+  7:37  warning  'statSync' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/backup-sheet.tsx
+  16:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/backup-view.tsx
+  33:23  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/care-view.tsx
+  516:21  warning  'taskId' is defined but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/disclaimer.tsx
+  30:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+  34:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/more-view.tsx
+   326:6  warning  React Hook useMemo has a missing dependency: 'fits'. Either include it or remove the dependency array         react-hooks/exhaustive-deps
+  1308:6  warning  React Hook useEffect has a missing dependency: 'file.mime'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/shell.tsx
+  74:9  warning  The 'screen' logical expression could make the dependencies of useEffect Hook (at line 185) change on every render. To fix this, wrap the initialization of 'screen' in its own useMemo() Hook  react-hooks/exhaustive-deps
+  74:9  warning  The 'screen' logical expression could make the dependencies of useEffect Hook (at line 396) change on every render. To fix this, wrap the initialization of 'screen' in its own useMemo() Hook  react-hooks/exhaustive-deps
+
+/workspace/app-quality/2026.11.69/scratch/src/src/components/start-dates.tsx
+  10:17  warning  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+/workspace/app-quality/2026.11.69/scratch/src/src/data/search.ts
+  360:10  warning  'screenFits' is defined but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+/workspace/app-quality/2026.11.69/scratch/src/src/lib/part-year.test.ts
+  11:56  error  Spaces are hard to count. Use {2}  no-regex-spaces
+
+/workspace/app-quality/2026.11.69/scratch/src/src/lib/store.ts
+  1278:11  warning  'next' is assigned a value but never used. Allowed unused vars must match /^_/u  @typescript-eslint/no-unused-vars
+
+✖ 14 problems (1 error, 13 warnings)
+  1 error and 0 warnings potentially fixable with the `--fix` option.
+

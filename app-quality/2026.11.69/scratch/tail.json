@@ -1,0 +1,20 @@
+{
+  "notes": [
+    {
+      "name": "filled weights page fits a 390px phone",
+      "ok": false,
+      "detail": "{\"vw\":390,\"page\":292,\"nodes\":[{\"tag\":\"nav\",\"id\":\"\",\"cls\":\"safe-bottom no-print fixed inset-x-0 bottom-0 z-20 border-t border-rule bg-paper\",\"right\":682,\"sw\":682,\"cw\":682,\"text\":\"Home Maintain Records Fix Library\"},{\"tag\":\"div\",\"id\":\"\",\"cls\":\"fixed inset-x-0 bottom-24 z-50 flex justify-center px-4\",\"right\":682,\"sw\":682,\"cw\":682,\"text\":\"\"},{\"tag\":\"dd\",\"id\":\"\",\"cls\":\"shrink-0 text-right text-sm tabular-nums text-ink\",\"right\":682,\"sw\":637,\"cw\":637,\"text\":\"2,000 lb No Steer rating entered. This measured weight is not room lef\"},{\"tag\":\"span\",\"id\":\"\",\"cls\":\"block font-semibold\",\"right\":682,\"sw\":637,\"cw\":637,\"text\":\"2,000 lb\"},{\"tag\":\"span\",\"id\":\"\",\"cls\":\"block font-normal text-muted\",\"right\":682,\"sw\":637,\"cw\":637,\"text\":\"No Steer rating entered. This measured weight is not room left under a\"},{\"tag\":\"dd\",\"id\":\"\",\"cls\":\"shrink-0 text-right text-sm tabular-nums text-ink\",\"right\":682,\"sw\":637,\"cw\":637,\"text\":\"2,800 lb No Steer rating entered. This measured weight is not room lef\"},{\"tag\":\"span\",\"id\":\"\",\"cls\":\"block font-semibold\",\"right\":682,\"sw\":637,\"cw\":637,\"text\":\"2,800 lb\"},{\"tag\":\"span\",\"id\":\"\",\"cls\":\"block font-normal text-muted\",\"right\":682,\"sw\":637,\"cw\":637,\"text\":\"No Steer rating entered. This measured weight is not room left under a\"}]}"
+    },
+    {
+      "name": "16% tongue share is one plain sentence",
+      "ok": true,
+      "detail": "Tongue weight is 16.00% of the loaded trailer. The usual band is 10–15%."
+    },
+    {
+      "name": "offline Privacy is a friendly page",
+      "ok": true,
+      "detail": "nav=ok sw={\"controlled\":false,\"script\":\"\",\"ready\":\"timeout\",\"keys\":[]} body=Skip to content Back This screen isn't on the phone yet Open it once while you have a signal, or save the book from Offline. Home, and the tabs along the bottom, are already on this phone. Back to Home Open Offline Home Maintain Records Fix Library"
+    }
+  ],
+  "pageerrors": []
+}

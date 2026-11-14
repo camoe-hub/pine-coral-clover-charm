@@ -1,0 +1,1 @@
+import{g as e}from"./index-CUuXJ1Ad.js";import{SupportSections as t}from"./legal-copy-D09pWndq.js";import{t as n}from"./public-page-CItebLqy.js";var r=e();function i(){return(0,r.jsx)(n,{kicker:`RivetCare`,title:`Support`,children:(0,r.jsx)(t,{})})}export{i as component};

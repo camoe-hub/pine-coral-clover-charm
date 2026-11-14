@@ -1,0 +1,2 @@
+# The pages also send noindex.
+User-agent: *

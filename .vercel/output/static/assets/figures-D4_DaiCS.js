@@ -1,0 +1,1 @@
+var e=[];function t(e,t,n){return!1}function n(t){return e.find(e=>e.id===t)}export{n,e as r,t};

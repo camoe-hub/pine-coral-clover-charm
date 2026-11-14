@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "app": "RivetCare",
+  "modelId": "c28",
+  "log": [{ "id": "new-1", "iso": "2026-03-03", "miles": 40, "note": "rivetcare file" }]
+}

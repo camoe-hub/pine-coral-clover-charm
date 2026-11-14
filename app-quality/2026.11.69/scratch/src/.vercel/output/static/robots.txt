@@ -1,0 +1,3 @@
+# The pages also send noindex. The project zip is not for crawlers.
+User-agent: *
+Disallow: /rivetcare-book.zip
