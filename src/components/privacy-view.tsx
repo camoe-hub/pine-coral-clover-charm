@@ -24,7 +24,7 @@ function clearNamedStorage() {
   try {
     for (let i = 0; i < localStorage.length; i++) {
       const key = localStorage.key(i);
-      if (key && key.startsWith("rivetcare-")) drop.add(key);
+      if (key && key.startsWith("rivetcare-") && key !== "rivetcare-pass") drop.add(key);
     }
   } catch {
     /* A private window can still remove the named keys. */

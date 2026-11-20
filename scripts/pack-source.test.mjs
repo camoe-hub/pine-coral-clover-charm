@@ -33,6 +33,7 @@ test("research and screenshots stay out of the downloadable project zip", () => 
   assert.equal(skipRel(".grok/skills/og/SKILL.md"), true);
   assert.equal(skipRel(".grok/preview.log"), true);
   assert.equal(skipRel("public/rivetcare-book.zip"), true);
+  assert.equal(skipRel("public/rivetcare-host.zip"), true);
   assert.equal(skipRel("src/data/procedures.ts"), false);
   assert.equal(skipRel("public/.well-known"), false);
   assert.equal(skipRel("public/.well-known/security.txt"), false);

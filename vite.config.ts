@@ -195,8 +195,12 @@ function securityHeadersPlugin(): Plugin {
         res.setHeader("cache-control", "no-store");
         res.end();
       });
-      server.middlewares.use((_req, res, next) => {
+      server.middlewares.use((req, res, next) => {
         for (const [key, value] of Object.entries(headers)) res.setHeader(key, value);
+        const path = (req.url ?? "").split("?", 1)[0];
+        if (path === "/rivetcare-host.zip") {
+          res.setHeader("content-disposition", 'attachment; filename="rivetcare-host.zip"');
+        }
         next();
       });
     },
@@ -244,6 +248,7 @@ export default defineConfig(({ command, isPreview }) => ({
             routeRules: {
               "/sw.js": { headers: { "cache-control": "no-cache, no-store, must-revalidate" } },
               "/version.txt": { headers: { "cache-control": "no-store" } },
+              "/rivetcare-host.zip": { headers: { "content-disposition": "attachment; filename=\"rivetcare-host.zip\"" } },
               "/**": { headers: securityHeaders(true) },
             },
           }),

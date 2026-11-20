@@ -1382,7 +1382,7 @@ export function AboutView() {
         <PageTitle className="mt-1 font-display text-3xl">About RivetCare</PageTitle>
         <p className="mt-1 text-base text-ink">Owner's book for your Airstream</p>
         <p className="mt-1 text-sm text-muted">@RivetCareApp</p>
-        <button type="button" onClick={() => useApp.getState().push({ name: "privacy" })} className="mt-2 block min-h-11 text-sm font-semibold text-accent">
+        <button type="button" onClick={() => useApp.getState().push({ name: "privacy" })} className="mt-1 block min-h-11 text-sm font-semibold text-accent">
           Privacy and where the data stays
         </button>
         <button type="button" onClick={() => useApp.getState().push({ name: "support" })} className="mt-1 block min-h-11 text-sm font-semibold text-accent">

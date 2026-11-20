@@ -22,6 +22,7 @@ export function skipRel(rel) {
     name === OUT_REL ||
     name === `${OUT_REL}.tmp` ||
     name === "public/rivetcare-book.zip" ||
+    name === "public/rivetcare-host.zip" ||
     name === "public/rivetcare-pages.pdf" ||
     name === "public/rivetcare-pages.zip"
   ) return true;
