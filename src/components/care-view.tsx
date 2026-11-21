@@ -640,7 +640,7 @@ export function ProcedureView({ id }: { id: string }) {
     <div className="space-y-4">
       <div>
         <Kicker>{p.system}</Kicker>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">{p.title}</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">{p.title}</PageTitle>
         {p.source ? <p className="mt-2 text-sm text-ink">Source: <ScopedCopy text={p.source} year={year} /></p> : <p className="mt-2 text-sm text-muted">Factory specification and owner notes are marked in the steps. The model-year manual governs.</p>}
         {p.revised ? <p className="mt-1 text-sm text-muted">Last checked {p.revised}. Not a factory revision date.</p> : null}
       </div>
@@ -685,9 +685,8 @@ export function ProcedureView({ id }: { id: string }) {
       {p.widget === "lugs" && <LugWidget />}
       {p.widget === "valves" && <ValveWidget />}
       {p.widget === "dot" && <DotWidget />}
-      <button
+      <Btn variant="text"
         type="button"
-        className="min-h-11 text-sm font-semibold text-accent"
         onClick={() => {
           const text = `Possible error in “${p.title}.” ${p.revised ? `Last checked ${p.revised}. ` : ""}Write what disagrees with the manual or the plate. This note stays on the phone.`;
           void Promise.resolve(useApp.getState().addNote(text)).then((ok) => {
@@ -696,7 +695,7 @@ export function ProcedureView({ id }: { id: string }) {
         }}
       >
         Report an error in this procedure
-      </button>
+      </Btn>
       <div>
         <label className="block text-sm font-semibold text-ink" htmlFor="step-search">
           Search these steps
@@ -750,9 +749,9 @@ function ShotThumb({ file, onRemove }: { file: LogFile; onRemove: () => void }) 
   return (
     <li className="relative shrink-0">
       {url ? <img src={url} alt="" className="h-16 w-16 rounded-lg object-cover" /> : <span className="grid h-16 w-16 place-items-center rounded-lg bg-paper text-xs text-muted">Photo</span>}
-      <button type="button" onClick={onRemove} className="mt-1 block min-h-11 text-sm font-semibold text-stop">
+      <Btn variant="text" className="mt-1 text-stop w-full justify-center" type="button" onClick={onRemove}>
         Remove
-      </button>
+      </Btn>
     </li>
   );
 }

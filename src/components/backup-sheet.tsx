@@ -6,6 +6,7 @@ import { rememberSavedBackup } from "@/lib/backup-preview";
 import { formatWhen } from "@/lib/date";
 import { MAX_BACKUP_TEXT, useApp } from "@/lib/store";
 import { useDialog } from "@/lib/use-dialog";
+import { Btn, Sheet } from "@/components/ui";
 
 type SavePicker = (options: {
   suggestedName?: string;
@@ -154,24 +155,14 @@ export function BackupSheet({ onClose }: { onClose: () => void }) {
   }
 
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-inverse/40" role="presentation" onClick={onClose}>
-      <div
-        ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="backup-title"
-        tabIndex={-1}
-        className="w-full max-w-lg rounded-t-3xl bg-sheet px-4 pt-4 outline-none"
-        style={{ paddingBottom: "calc(1.25rem + env(safe-area-inset-bottom))" }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="sticky top-0 z-10 -mx-4 flex items-center bg-sheet px-2 pb-2">
+    <Sheet labelledBy="backup-title" dialogRef={dialogRef} onScrim={onClose}>
+        <div className="sticky top-0 z-10 -mx-5 flex items-center bg-sheet px-5 pb-2">
           <button type="button" onClick={onClose} className="flex min-h-11 items-center text-ink" aria-label="Back">
             <ChevronLeft className="size-5 shrink-0" aria-hidden />
             <span className="text-sm font-semibold">Back</span>
           </button>
         </div>
-        <h2 id="backup-title" className="font-display text-2xl text-ink">
+        <h2 id="backup-title" className="text-2xl text-ink">
           Save a copy
         </h2>
         <p className="mt-2 text-sm text-ink">
@@ -187,21 +178,20 @@ export function BackupSheet({ onClose }: { onClose: () => void }) {
         ) : null}
         {error ? <p className="mt-2 text-sm text-stop">{error}</p> : null}
         <div className="mt-4 flex flex-col gap-2">
-          <button type="button" disabled={!file} onClick={() => void share().then((ok) => { if (!ok) setError("Could not open the share sheet."); })} className="min-h-12 w-full rounded-full bg-navy font-semibold text-on-navy disabled:opacity-50">
+          <button type="button" disabled={!file} onClick={() => void share().then((ok) => { if (!ok) setError("Could not open the share sheet."); })} className="min-h-12 w-full rounded-full bg-navy font-semibold text-on-navy disabled:opacity-40">
             {file ? "Share or save to Files" : "Preparing the file…"}
           </button>
-          <button type="button" disabled={!file} onClick={() => void saveFile()} className="min-h-12 w-full rounded-full border border-line font-semibold text-ink disabled:opacity-50">
+          <button type="button" disabled={!file} onClick={() => void saveFile()} className="min-h-12 w-full rounded-full border border-line font-semibold text-ink disabled:opacity-40">
             Save file
           </button>
-          <button type="button" disabled={!file} onClick={() => void copy()} className="min-h-12 w-full rounded-full border border-line font-semibold text-ink disabled:opacity-50">
+          <button type="button" disabled={!file} onClick={() => void copy()} className="min-h-12 w-full rounded-full border border-line font-semibold text-ink disabled:opacity-40">
             {copied ? "Copied" : "Copy to clipboard"}
           </button>
-          <button type="button" onClick={onClose} className="min-h-12 w-full font-semibold text-accent">
+          <Btn variant="text" className="min-h-12 w-full justify-center text-base" type="button" onClick={onClose}>
             Not now
-          </button>
+          </Btn>
         </div>
-      </div>
-    </div>,
+    </Sheet>,
     document.body,
   );
 }

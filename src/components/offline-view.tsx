@@ -118,7 +118,7 @@ export function OfflineView() {
         There is no account and no sync time. What you typed stays in this browser until the browser erases it. A backup file is a copy you save yourself. It is not the same as working offline.
       </p>
       <section className="rounded-[20px] border border-line bg-sheet p-4">
-        <h2 className="font-display text-xl text-ink">On this phone</h2>
+        <h2 className="text-xl text-ink">On this phone</h2>
         <ul className="mt-3 grid gap-3 text-sm text-ink">
           <Row label="App shell" ready={shell} missing="Not saved for offline yet. Save while you have a signal." />
           <Row
@@ -143,7 +143,7 @@ export function OfflineView() {
         </p>
       </section>
       <section className="rounded-[20px] border border-line bg-sheet p-4">
-        <h2 className="font-display text-xl text-ink">Needs a signal</h2>
+        <h2 className="text-xl text-ink">Needs a signal</h2>
         <p className="mt-2 text-sm text-ink">Factory manuals, the factory parts book, Apple Maps, and the NHTSA recall lookup open on the network. They are not stored here.</p>
       </section>
       <p className="text-sm text-muted">{lastBackup ? `Last backup saved ${formatWhen(lastBackup)}.` : "No backup file saved yet."}</p>

@@ -20,7 +20,7 @@ import { RestoreSheet } from "@/components/backup-view";
 import { applyBackupFiles } from "@/lib/restore-files";
 import { DisclaimerCopy } from "@/components/disclaimer";
 import { PLATE_FIELDS, platePlaceholder, waterHeaterSpec } from "@/lib/plates";
-import { Btn, Card, Kicker, PageTitle } from "@/components/ui";
+import { Btn, Card, Chip, Kicker, PageTitle } from "@/components/ui";
 
 export function ProceduresView() {
   const push = useApp((s) => s.push);
@@ -37,7 +37,7 @@ export function ProceduresView() {
   return (
     <div>
       <Kicker>Step by step</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Procedures</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Procedures</PageTitle>
       <p className="mt-1 text-sm text-muted">Step by step, for this coach. Your model-year manual still governs.</p>
       <label className="mt-4 block text-sm font-semibold text-ink" htmlFor="procedure-search">
         Search procedures
@@ -81,7 +81,7 @@ export function ChecklistsView() {
   return (
     <div>
       <Kicker>Before you leave, and after you arrive</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Checklists</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Checklists</PageTitle>
       <ul className="mt-4 rounded-card border border-line bg-sheet">
         {checklists.map((c, i) => (
           <li key={c.id} className={i === checklists.length - 1 ? "" : "border-b border-rule"}>
@@ -120,7 +120,7 @@ export function ChecklistView({ id }: { id: string }) {
   return (
     <div>
       <Kicker>{finished ? `Finished ${formatWhen(finished)}` : `${n} of ${all.length}`}</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">{list.title}</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">{list.title}</PageTitle>
       <p className="mt-2 text-sm text-muted">{list.intro}</p>
       {id === "boondock" && <BudgetCard />}
       <div
@@ -256,7 +256,7 @@ export function SpecsView() {
   return (
     <div>
       <Kicker>Selected floor, not every year</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">{m.name}</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">{m.name}</PageTitle>
       <p className="mt-2 text-sm text-muted">
         These figures match the floor plan you picked. They do not change with the VIN year. Tire pressure is the maximum cold rating. Check your placard and manual. Inflate to the placard for the load you are carrying, and confirm earlier years in that year’s manual.
       </p>
@@ -330,7 +330,7 @@ export function CodesView({ initialQuery = "", initialAppliance = "All" }: { ini
   return (
     <div>
       <Kicker>Panel, LED, and remote</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Fault codes</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Fault codes</PageTitle>
       <p className="mt-1 text-sm text-muted">Codes for this coach. Search still finds the others, marked not on this coach.</p>
       <p className={`mt-1 text-sm ${fit.standing === "factory" ? "text-muted" : "font-semibold text-ink"}`}>{fit.line}</p>
       <label className="mt-4 block text-sm font-semibold text-ink" htmlFor="fault-code">
@@ -349,13 +349,9 @@ export function CodesView({ initialQuery = "", initialAppliance = "All" }: { ini
       />
       <div className="chip-row -mx-4 mt-3 flex gap-2 px-4">
         {["All", ...chips].map((name) => (
-          <button
-            key={name}
-            onClick={() => setApp(name)}
-            className={`min-h-11 min-w-11 shrink-0 rounded-full px-3 text-sm font-semibold ${app === name ? "bg-navy text-on-navy" : "border border-line bg-sheet"}`}
-          >
+          <Chip key={name} on={app === name} onClick={() => setApp(name)}>
             {name === "Alde 3030" ? aldeShownName(year, model.id) : name}
-          </button>
+          </Chip>
         ))}
       </div>
       <ul className="mt-4 space-y-2">
@@ -432,7 +428,7 @@ export function RecallsView() {
     <div className="space-y-4">
       <div>
         <Kicker>Checked 24–25 Oct 2026</Kicker>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">Recalls</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">Recalls</PageTitle>
         <button type="button" onClick={openNhtsa} className="mt-3 flex min-h-11 w-full items-center justify-center rounded-full bg-navy px-4 text-sm font-semibold text-on-navy">
           {ok ? "Look up this VIN at NHTSA" : "Look up a VIN at NHTSA"}
         </button>
@@ -510,7 +506,7 @@ export function ToolsView() {
   return (
     <div>
       <Kicker>Classic 28RB and Globetrotter 27FB kit</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">What to carry</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">What to carry</PageTitle>
       <p className="mt-2 text-sm text-muted">Socket sizes vary. Test-fit every tool on your own trailer before you leave.</p>
       <ul className="mt-4 space-y-2">
         {kit.map(([t, d]) => (
@@ -740,10 +736,10 @@ export function LogView() {
   return (
     <div>
       <Kicker>On this phone</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Service log</PageTitle>
-      <button type="button" onClick={() => useApp.getState().push({ name: "desk" })} className="mt-2 min-h-11 text-sm font-semibold text-accent">
+      <PageTitle className="mt-1 text-3xl text-ink">Service log</PageTitle>
+      <Btn variant="text" className="mt-2" type="button" onClick={() => useApp.getState().push({ name: "desk" })}>
         Shop sheet
-      </button>
+      </Btn>
       <p className="mt-1 text-sm text-muted">
         Notes and photos stay with this trailer. A different coach has its own miles and log. Clearing the phone’s data deletes them, so keep a backup file.{" "}
         {odo ? `Current odometer ${odo.toLocaleString()} mi.` : "Add the mileage on Maintain so the schedule can use it."}
@@ -848,7 +844,8 @@ export function LogView() {
               )}
               <div className="mt-2 flex gap-4">
                 {editing !== entry.id && (
-                  <button
+                  <Btn
+                    variant="text"
                     type="button"
                     onClick={() => {
                       setEditing(entry.id);
@@ -867,14 +864,13 @@ export function LogView() {
                         phone: entry.phone,
                       });
                     }}
-                    className="min-h-11 text-sm font-semibold text-accent"
                   >
                     Edit
-                  </button>
+                  </Btn>
                 )}
-                <button type="button" onClick={() => remove(entry.id)} className="min-h-11 text-sm font-semibold text-stop">
+                <Btn variant="text" className="text-stop" type="button" onClick={() => remove(entry.id)}>
                   Remove
-                </button>
+                </Btn>
               </div>
             </li>
           ))}
@@ -1079,7 +1075,7 @@ export function LogView() {
           </div>
         ) : null}
         <Btn
-          className="mt-3 w-full disabled:border disabled:border-line disabled:bg-sheet disabled:text-muted disabled:opacity-100"
+          className="mt-3 w-full disabled:opacity-40"
           disabled={busy || (!note.trim() && !job.trim() && pending.length === 0 && !serviceFilled(detail))}
           aria-describedby={!note.trim() && !job.trim() && pending.length === 0 && !serviceFilled(detail) ? "log-save-why" : undefined}
           onClick={() => void saveEntry()}
@@ -1362,9 +1358,9 @@ function FileViewer({ file, onClose, onRemove }: { file: LogFile; onClose: () =>
         </div>
         <div className="safe-bottom bg-sheet px-4 pt-4">
           <p className="text-sm font-semibold text-ink">{file.name}</p>
-          <button type="button" onClick={onRemove} className="mt-1 min-h-11 text-sm font-semibold text-stop">
+          <Btn variant="text" className="mt-1 text-stop" type="button" onClick={onRemove}>
             Remove this file
-          </button>
+          </Btn>
         </div>
       </div>
     </div>,
@@ -1379,18 +1375,18 @@ export function AboutView() {
     <div className="space-y-4 text-sm text-ink">
       <div>
         <Kicker>November 2026 edition</Kicker>
-        <PageTitle className="mt-1 font-display text-3xl">About RivetCare</PageTitle>
+        <PageTitle className="mt-1 text-3xl">About RivetCare</PageTitle>
         <p className="mt-1 text-base text-ink">Owner's book for your Airstream</p>
         <p className="mt-1 text-sm text-muted">@RivetCareApp</p>
-        <button type="button" onClick={() => useApp.getState().push({ name: "privacy" })} className="mt-1 block min-h-11 text-sm font-semibold text-accent">
+        <Btn variant="text" className="mt-1 w-full justify-center" type="button" onClick={() => useApp.getState().push({ name: "privacy" })}>
           Privacy and where the data stays
-        </button>
-        <button type="button" onClick={() => useApp.getState().push({ name: "support" })} className="mt-1 block min-h-11 text-sm font-semibold text-accent">
+        </Btn>
+        <Btn variant="text" className="mt-1 w-full justify-center" type="button" onClick={() => useApp.getState().push({ name: "support" })}>
           Support
-        </button>
-        <button type="button" onClick={() => useApp.getState().push({ name: "records" })} className="mt-1 block min-h-11 text-left text-sm font-semibold text-accent">
+        </Btn>
+        <Btn variant="text" className="mt-1 w-full justify-start text-left" type="button" onClick={() => useApp.getState().push({ name: "records" })}>
           Dealer and roadside are saved under Records
-        </button>
+        </Btn>
       </div>
       <DisclaimerCopy />
     </div>

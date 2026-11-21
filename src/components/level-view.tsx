@@ -304,7 +304,7 @@ export function LevelView() {
   return (
     <div>
       <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">On site</p>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Trailer level</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Trailer level</PageTitle>
       <p className="mt-2 text-sm text-ink">Top of the phone toward the tongue. Screen up, flat on the floor. Side to side first, then the jack. Stabilizers are not for leveling.</p>
 
       <div className="mt-4 flex justify-center">

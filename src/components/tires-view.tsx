@@ -190,7 +190,7 @@ export function TiresView() {
   return (
     <div>
       <Kicker>Sidewall and placard</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Tires</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Tires</PageTitle>
       <p className="mt-2 text-sm text-muted">
         Cold pressure is the number you run, from the placard for this load. Each tire gets its own DOT code, including the spare. The maximum on the spec card is not the pressure to use.
       </p>
@@ -621,9 +621,9 @@ function PhotoRow({
       {photo ? (
         <div className="mt-2 flex items-center gap-3">
           <Thumb photo={photo} />
-          <button type="button" onClick={onRemove} className="min-h-11 text-sm font-semibold text-stop">
+          <Btn variant="text" className="text-stop" type="button" onClick={onRemove}>
             Remove
-          </button>
+          </Btn>
         </div>
       ) : null}
       <label className="mt-1 flex min-h-11 cursor-pointer items-center text-sm font-semibold text-accent">
@@ -659,9 +659,9 @@ function CheckRow({ check, placard, onRemove }: { check: PressureCheck; placard:
           </li>
         ))}
       </ul>
-      <button type="button" onClick={onRemove} className="mt-1 min-h-11 text-sm font-semibold text-stop">
+      <Btn variant="text" className="mt-1 text-stop" type="button" onClick={onRemove}>
         Remove
-      </button>
+      </Btn>
     </li>
   );
 }

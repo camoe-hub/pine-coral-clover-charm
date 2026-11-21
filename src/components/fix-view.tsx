@@ -16,7 +16,7 @@ import { AlsoInBook } from "@/components/figure-view";
 import { StepMark } from "@/components/step-mark";
 import { jumpsForSymptom } from "@/data/graph";
 import { recalls } from "@/data/recalls";
-import { Btn, Card, Kicker, PageTitle, Pill } from "@/components/ui";
+import { Btn, Card, Chip, Kicker, PageTitle, Pill } from "@/components/ui";
 
 type StartJob = {
   id: string;
@@ -277,9 +277,9 @@ export function FixView() {
                   </button>
                   {choices && choices.length > 0 && openStart === job.id && (
                     <div className="mt-2 space-y-2 pl-3">
-                      <button type="button" onClick={() => setOpenStart(null)} className="flex min-h-11 items-center text-sm font-semibold text-accent">
+                      <Btn variant="text" type="button" onClick={() => setOpenStart(null)}>
                         Back
-                      </button>
+                      </Btn>
                       <p className="text-sm font-semibold text-ink">{job.ask}</p>
                       {choices.map((choice) => (
                         <button
@@ -341,14 +341,14 @@ export function FixView() {
                   })}
                   {more.length > 0 && (
                     <div className="mt-3">
-                      <button
+                      <Btn
+                        variant="text"
                         type="button"
                         aria-expanded={openMore === name}
                         onClick={() => setOpenMore(openMore === name ? null : name)}
-                        className="min-h-11 text-sm font-semibold text-accent"
                       >
                         {openMore === name ? "Hide" : "Show"} {more.length} more checks
-                      </button>
+                      </Btn>
                       {openMore === name && (
                         <ul className="mt-2 space-y-2">
                           {more.map((s) => (
@@ -440,19 +440,6 @@ function SymptomRow({ s, year, onOpen }: { s: Symptom; year: number | null; onOp
   );
 }
 
-function Chip({ on, children, onClick }: { on: boolean; children: string; onClick: () => void }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={on}
-      className={`min-h-11 min-w-11 shrink-0 rounded-full px-3 text-sm font-semibold ${on ? "bg-navy text-on-navy" : "border border-line bg-sheet text-ink"}`}
-    >
-      {children}
-    </button>
-  );
-}
-
 function PartLinks({ ids }: { ids?: string[] }) {
   const push = useApp((s) => s.push);
   const rows = (ids ?? []).map((id) => partById(id)).filter((part) => !!part);
@@ -500,7 +487,7 @@ export function SymptomView({ id, step }: { id: string; step: number }) {
     return (
       <div className="space-y-4">
         <Kicker>{sy.system}</Kicker>
-        <PageTitle className="font-display text-3xl text-ink">That was the one.</PageTitle>
+        <PageTitle className="text-3xl text-ink">That was the one.</PageTitle>
         <p className="text-sm text-muted">
           If it comes back, start again at check 1. Write it in the service log so the next time is faster.
         </p>
@@ -514,7 +501,7 @@ export function SymptomView({ id, step }: { id: string; step: number }) {
     <div className="space-y-4">
       <div>
         <p className="text-sm font-semibold text-accent">{sy.system}</p>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">{sy.title}</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">{sy.title}</PageTitle>
         <p className="mt-1 text-sm text-muted wrap-anywhere"><ScopedCopy text={sy.blurb} year={year} /></p>
         <p className="mt-2 text-sm text-ink">
           {/owner-reported/i.test(`${sy.blurb} ${sy.checks.map((c) => c.action).join(" ")}`)
@@ -522,9 +509,9 @@ export function SymptomView({ id, step }: { id: string; step: number }) {
             : "A step that does not name a factory manual is not a factory specification. The model-year manual governs."}
         </p>
         {parent && (
-          <button type="button" className="mt-2 min-h-11 text-sm font-semibold text-accent" onClick={() => push({ name: "symptom", id: parent.id, step: 0 })}>
+          <Btn variant="text" className="mt-2" type="button" onClick={() => push({ name: "symptom", id: parent.id, step: 0 })}>
             Part of {parent.title}
-          </button>
+          </Btn>
         )}
       </div>
       <p className="text-sm text-muted">Work down the list. Stop when one of these is the problem.</p>
@@ -542,15 +529,14 @@ export function SymptomView({ id, step }: { id: string; step: number }) {
       <PartLinks ids={sy.parts} />
       <div className="grid grid-cols-1">
         <Btn onClick={() => setFixed(true)}>This fixed it</Btn>
-        <button type="button" className="min-h-11 text-sm font-semibold text-accent" onClick={() => push({ name: "service" })}>
+        <Btn variant="text" type="button" onClick={() => push({ name: "service" })}>
           None of these. Find a shop
-        </button>
-        <button type="button" className="min-h-11 text-sm font-semibold text-accent" onClick={() => push({ name: "table", id, step: 0 })}>
+        </Btn>
+        <Btn variant="text" type="button" onClick={() => push({ name: "table", id, step: 0 })}>
           See this in the table
-        </button>
-        <button
+        </Btn>
+        <Btn variant="text"
           type="button"
-          className="min-h-11 text-sm font-semibold text-accent"
           onClick={() => {
             const text = `Possible error in “${sy.title}.” Write what disagrees with the manual or the plate. This note stays on the phone.`;
             void Promise.resolve(useApp.getState().addNote(text)).then((ok) => {
@@ -559,7 +545,7 @@ export function SymptomView({ id, step }: { id: string; step: number }) {
           }}
         >
           Report an error in this check
-        </button>
+        </Btn>
       </div>
       {also.length > 0 && (
         <div>

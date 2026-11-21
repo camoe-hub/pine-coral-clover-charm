@@ -46,7 +46,7 @@ export function ShopSheet() {
         </button>
         <p className="mt-2 text-sm text-muted">One page for the shop. Print, then choose Save as PDF. The full history is the CSV on the service log. This is a record, not a work order.</p>
       </div>
-      <PageTitle className="font-display text-3xl text-ink">{nickname || model.name}</PageTitle>
+      <PageTitle className="text-3xl text-ink">{nickname || model.name}</PageTitle>
       <p className="mt-1 text-sm text-ink">{model.name}{year ? ` · ${year}` : " · Year not set"}</p>
       <p className="text-sm text-ink">{vin ? `VIN ${vin}` : "VIN not entered"}</p>
       <p className="text-sm text-ink">{odo > 0 ? `${odo.toLocaleString()} trailer miles` : "Trailer miles not set"}</p>
@@ -65,7 +65,7 @@ export function ShopSheet() {
         </p>
       ) : null}
 
-      <h2 className="mt-5 font-display text-xl text-ink">Installed equipment</h2>
+      <h2 className="mt-5 text-xl text-ink">Installed equipment</h2>
       {equipment.length === 0 ? (
         <p className="mt-1 text-sm text-ink">No appliance plates saved. Read them off the units in Glovebox.</p>
       ) : (
@@ -76,7 +76,7 @@ export function ShopSheet() {
         </ul>
       )}
 
-      <h2 className="mt-5 font-display text-xl text-ink">Diagnostic results</h2>
+      <h2 className="mt-5 text-xl text-ink">Diagnostic results</h2>
       {diagnostics.length === 0 ? (
         <p className="mt-1 text-sm text-ink">No flowchart report is in the log. A saved flowchart report is a path taken, not a diagnosis.</p>
       ) : (
@@ -89,7 +89,7 @@ export function ShopSheet() {
         </ul>
       )}
 
-      <h2 className="mt-5 font-display text-xl text-ink">Tires</h2>
+      <h2 className="mt-5 text-xl text-ink">Tires</h2>
       {tires.psi || tires.dot || tires.on || tires.rotated || oldest || tires.checks.length ? (
         <ul className="mt-1 text-sm text-ink">
           {tires.psi ? <li>Placard cold pressure written down: {tires.psi} psi</li> : <li>Placard pressure not set</li>}
@@ -142,7 +142,7 @@ export function ShopSheet() {
         <p className="mt-1 text-sm text-ink">Tire dates not set.</p>
       )}
 
-      <h2 className="mt-5 font-display text-xl text-ink">Due or never recorded</h2>
+      <h2 className="mt-5 text-xl text-ink">Due or never recorded</h2>
       {due.length === 0 ? (
         <p className="mt-1 text-sm text-ink">Nothing on the schedule is due.</p>
       ) : (
@@ -155,7 +155,7 @@ export function ShopSheet() {
         </ul>
       )}
 
-      <h2 className="mt-5 font-display text-xl text-ink">Service history</h2>
+      <h2 className="mt-5 text-xl text-ink">Service history</h2>
       {notes.length === 0 ? (
         <p className="mt-1 text-sm text-ink">No service notes yet.</p>
       ) : (
@@ -187,14 +187,14 @@ export function OwnerHistory() {
         </button>
         <p className="mt-2 text-sm text-muted">This is the service history on this phone. The browser’s print sheet can save it as a PDF. It is a record, not a work order.</p>
       </div>
-      <PageTitle className="font-display text-3xl text-ink">{nickname || model.name}</PageTitle>
+      <PageTitle className="text-3xl text-ink">{nickname || model.name}</PageTitle>
       <p className="mt-1 text-sm text-ink">
         {model.name}
         {year ? ` · ${year}` : ""}
       </p>
       <p className="text-sm text-ink">{vin ? `VIN ${vin}` : "VIN not entered"}</p>
       <p className="text-sm text-ink">{odo > 0 ? `${odo.toLocaleString()} trailer miles` : "Trailer miles not set"}</p>
-      <h2 className="mt-5 font-display text-xl text-ink">Service history</h2>
+      <h2 className="mt-5 text-xl text-ink">Service history</h2>
       {log.length === 0 ? (
         <p className="mt-1 text-sm text-ink">No service records yet.</p>
       ) : (

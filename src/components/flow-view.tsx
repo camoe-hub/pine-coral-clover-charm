@@ -33,7 +33,7 @@ export function FlowsView() {
   return (
     <div>
       <Kicker>Yes, no, or not sure</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Flowcharts</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Flowcharts</PageTitle>
       <p className="mt-1 text-sm text-muted">A shorter path through the same problems. The checks it opens are the source. Follow those if the wording ever disagrees.</p>
       {filter ? (
         <p className="mt-3 text-sm text-ink">
@@ -130,7 +130,7 @@ export function FlowView({ id }: { id: string }) {
       <Kicker>
         {flow.system} · step {trail.length + 1}
       </Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">{flow.title}</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">{flow.title}</PageTitle>
       <p className="mt-1 text-sm text-muted">{model.name} · {year ?? "Year not set"}</p>
       <PlateLine flowId={flow.id} />
       {trail.length === 0 && gasStopFlow(flow.id) && (
@@ -268,9 +268,9 @@ function PlateLine({ flowId }: { flowId: string }) {
     return (
       <div className="mt-2 text-sm text-muted">
         <p>No {plateLabel(key).toLowerCase()} plate saved.</p>
-        <button type="button" className="min-h-11 font-semibold text-accent" onClick={() => push({ name: "specs" })}>
+        <Btn variant="text" className="text-base" type="button" onClick={() => push({ name: "specs" })}>
           Read it off the unit
-        </button>
+        </Btn>
       </div>
     );
   }

@@ -35,7 +35,7 @@ export function SuppliesView() {
   return (
     <div>
       <Kicker>Collar stamp and battery label</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Cylinders and batteries</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Cylinders and batteries</PageTitle>
       <p className="mt-2 text-sm text-muted">
         The collar date is on the cylinder, not the tank cover. If the stamp is a month and year, use the first of that month. Battery age is the day these batteries went in.
       </p>

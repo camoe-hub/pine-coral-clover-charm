@@ -59,7 +59,7 @@ export function SetupView() {
         className="safe-bottom max-h-[92vh] w-full overflow-y-auto rounded-t-3xl bg-sheet px-5 pb-6 pt-5"
       >
         <p className="text-xs font-semibold uppercase tracking-wider text-muted">This phone</p>
-        <h2 id="setup-title" className="mt-1 font-display text-3xl text-ink">
+        <h2 id="setup-title" className="mt-1 text-3xl text-ink">
           Set up this trailer
         </h2>
         <p className="mt-2 text-sm text-muted">Pick the coach. A model year is enough. A VIN is optional, and you can change any of this later.</p>

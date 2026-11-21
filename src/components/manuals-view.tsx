@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { PageTitle } from "@/components/ui";
+import { Chip, PageTitle } from "@/components/ui";
 import { LIBRARY_URL, manualLinks, manualRevision, manualYears } from "@/data/manuals";
 import { coachYear } from "@/data/coach";
 import { useApp } from "@/lib/store";
@@ -26,7 +26,7 @@ export function ManualsView() {
 
   return (
     <div>
-      <PageTitle className="font-display text-3xl text-ink">Manuals</PageTitle>
+      <PageTitle className="text-3xl text-ink">Manuals</PageTitle>
       <p className="mt-2 text-sm text-muted">
         Factory manuals and parts books, 2000 through {manualYears[0]}. They open on Airstream’s site. Nothing is stored in this app.
       </p>
@@ -91,18 +91,5 @@ export function ManualsView() {
       </ul>
       {rows.length === 0 && <p className="mt-4 text-sm text-muted">Nothing matches. Try all years, or the Airstream library.</p>}
     </div>
-  );
-}
-
-function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: string }) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={on}
-      className={`min-h-11 min-w-11 shrink-0 rounded-full px-3 text-sm font-semibold ${on ? "bg-navy text-on-navy" : "border border-line bg-sheet text-ink"}`}
-    >
-      {children}
-    </button>
   );
 }

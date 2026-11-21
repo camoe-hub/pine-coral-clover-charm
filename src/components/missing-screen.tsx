@@ -30,7 +30,7 @@ function MissingScreen({ error }: { error: unknown }) {
   const detail = error instanceof Error && error.message ? error.message : "";
   return (
     <div className="grid gap-3 py-6">
-      <h2 className="font-display text-3xl text-ink">{missing ? "This screen isn't on the phone yet" : "Something went wrong"}</h2>
+      <h2 className="text-3xl text-ink">{missing ? "This screen isn't on the phone yet" : "Something went wrong"}</h2>
       <p className="text-base text-ink">
         {missing
           ? "Open it once while you have a signal, or save the book from Offline. Home, and the tabs along the bottom, are already on this phone."

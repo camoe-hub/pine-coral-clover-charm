@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PageTitle } from "@/components/ui";
+import { Btn, PageTitle, Sheet } from "@/components/ui";
 import { createPortal } from "react-dom";
 import { ChevronLeft } from "lucide-react";
 import { BackupSheet } from "@/components/backup-sheet";
@@ -62,11 +62,11 @@ export function BackupView() {
   return (
     <div className="space-y-4">
       <div>
-        <PageTitle className="font-display text-3xl text-ink">Backup</PageTitle>
+        <PageTitle className="text-3xl text-ink">Backup</PageTitle>
         <p className="mt-2 text-sm text-ink">A backup is a file you save. This app does not upload one. A restore keeps the previous log on this phone until you tap Keep this restore.</p>
       </div>
       <section className="rounded-card border border-line bg-sheet p-4">
-        <h2 className="font-display text-2xl text-ink">On this phone</h2>
+        <h2 className="text-2xl text-ink">On this phone</h2>
         <dl className="mt-3">
           <Row label="Last backup saved" value={lastBackup ? formatWhen(lastBackup) : "None yet"} />
           <Row label="Last file size" value={formatBytes(lastBackupBytes)} />
@@ -98,16 +98,16 @@ export function BackupView() {
       </label>
       <p className="-mt-2 text-sm text-muted">Checks the file and shows what would change. Nothing is replaced until you confirm.</p>
       {lastSavedBackupFile() ? (
-        <button type="button" onClick={() => void inspect(lastSavedBackupFile()!)} className="block min-h-11 w-full text-left text-sm font-semibold text-accent">
+        <Btn variant="text" className="w-full justify-start text-left" type="button" onClick={() => void inspect(lastSavedBackupFile()!)}>
           Verify the copy just saved
-        </button>
+        </Btn>
       ) : null}
-      <button type="button" onClick={() => push({ name: "history" })} className="block min-h-11 w-full text-left text-sm font-semibold text-accent">
+      <Btn variant="text" className="w-full justify-start text-left" type="button" onClick={() => push({ name: "history" })}>
         Owner's history, to print or save as PDF
-      </button>
-      <button type="button" onClick={() => push({ name: "privacy" })} className="block min-h-11 w-full text-left text-sm font-semibold text-accent">
+      </Btn>
+      <Btn variant="text" className="w-full justify-start text-left" type="button" onClick={() => push({ name: "privacy" })}>
         Privacy and where the data stays
-      </button>
+      </Btn>
       {open && <BackupSheet onClose={() => setOpen(false)} />}
       {look && (
         <RestoreSheet
@@ -143,24 +143,14 @@ export function RestoreSheet({ look, onClose, onRestore }: { look: BackupPreview
   const summary = look.summary;
   const dialogRef = useDialog(onClose);
   return createPortal(
-    <div className="fixed inset-0 z-50 flex items-end justify-center bg-inverse/40" role="presentation" onClick={onClose}>
-      <div
-        ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="look-title"
-        tabIndex={-1}
-        className="max-h-[85vh] w-full max-w-lg overflow-y-auto rounded-t-3xl bg-sheet px-4 pt-4 outline-none"
-        style={{ paddingBottom: "calc(1.25rem + env(safe-area-inset-bottom))" }}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="sticky top-0 z-10 -mx-4 flex items-center bg-sheet px-2 pb-2">
+    <Sheet labelledBy="look-title" dialogRef={dialogRef} onScrim={onClose}>
+        <div className="sticky top-0 z-10 -mx-5 flex items-center bg-sheet px-5 pb-2">
           <button type="button" onClick={onClose} className="flex min-h-11 items-center text-ink" aria-label="Back">
             <ChevronLeft className="size-5 shrink-0" aria-hidden />
             <span className="text-sm font-semibold">Back</span>
           </button>
         </div>
-        <h2 id="look-title" className="font-display text-2xl text-ink">Inside this file</h2>
+        <h2 id="look-title" className="text-2xl text-ink">Inside this file</h2>
         <p className="mt-1 text-sm text-muted">{look.name}</p>
         <dl className="mt-3">
           <Row label="File size" value={formatBytes(summary.bytes)} />
@@ -180,11 +170,10 @@ export function RestoreSheet({ look, onClose, onRestore }: { look: BackupPreview
         <button type="button" onClick={onRestore} className="mt-4 min-h-12 w-full rounded-full bg-navy font-semibold text-on-navy">
           Restore this backup
         </button>
-        <button type="button" onClick={onClose} className="mt-2 min-h-12 w-full font-semibold text-accent">
+        <Btn variant="text" className="mt-2 min-h-12 w-full justify-center text-base" type="button" onClick={onClose}>
           Don't restore
-        </button>
-      </div>
-    </div>,
+        </Btn>
+    </Sheet>,
     document.body,
   );
 }

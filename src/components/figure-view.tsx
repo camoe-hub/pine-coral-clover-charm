@@ -6,7 +6,7 @@ import { coachYear } from "@/data/coach";
 import { useApp } from "@/lib/store";
 import { circuitSheet, type CircuitSheet } from "@/data/circuit-sheets";
 import { cadenceLabel, tasks } from "@/data/schedule";
-import { Kicker, PageTitle } from "@/components/ui";
+import { Btn, Kicker, PageTitle } from "@/components/ui";
 
 const order = ["Schedule", "Wheels, tires, and brakes", "Water and the body", "Heat and power", "Schematics", "Flowcharts", "Decision charts", "Where things are"];
 
@@ -14,7 +14,7 @@ function DiagramsGone() {
   return (
     <div>
       <Kicker>Not in this edition</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Diagrams</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Diagrams</PageTitle>
       <p className="mt-3 text-base text-ink">The pictures are not in this copy. The checks are written out on Fix and in Procedures. The drawing, if you need it, is in the manual for this coach.</p>
     </div>
   );
@@ -31,14 +31,14 @@ export function FiguresView() {
   return (
     <div>
       <Kicker>From the guide</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Figures</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Figures</PageTitle>
       <p className="mt-1 text-sm text-muted">
         {all ? "Every chart in the guide." : `Charts for this ${model.short}.`}
       </p>
       {hidden > 0 && (
-        <button type="button" onClick={() => setAll((v) => !v)} className="mt-2 min-h-11 text-sm font-semibold text-accent">
+        <Btn variant="text" className="mt-2" type="button" onClick={() => setAll((v) => !v)}>
           {all ? `Only this ${model.short}` : `Show all diagrams`}
-        </button>
+        </Btn>
       )}
       {order.map((group) => {
         const items = shown.filter((f) => f.group === group);
@@ -110,7 +110,7 @@ export function FigureView({ id }: { id: string }) {
   return (
     <div>
       <Kicker>{fig.group}</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">{fig.num}</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">{fig.num}</PageTitle>
       <p className="mt-1 text-base text-ink">{fig.title}</p>
       {fig.id === "p14-1" ? (
         <>
@@ -161,7 +161,7 @@ function figureMark(num: string) {
 function CircuitTable({ sheet, scale }: { sheet: CircuitSheet; scale: number }) {
   return (
     <div className="mt-3 min-w-0 text-ink" style={{ fontSize: `${scale}em` }}>
-      <h2 className="font-display text-xl text-ink">{sheet.heading}</h2>
+      <h2 className="text-xl text-ink">{sheet.heading}</h2>
       {sheet.sections.map((section) => (
         <section key={section.label} className="mt-3 min-w-0 overflow-hidden rounded-card border border-line bg-sheet">
           <h3 className="bg-paper px-3 py-2 text-[0.875em] font-semibold text-ink">{section.label}</h3>

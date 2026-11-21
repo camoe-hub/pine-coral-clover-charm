@@ -4,7 +4,7 @@ import { modelById } from "@/data/models";
 import { coachYear, symptomOn } from "@/data/coach";
 import { scopeLead, scopedLine } from "@/lib/year-scope";
 import { useApp } from "@/lib/store";
-import { Kicker, PageTitle, Pill } from "@/components/ui";
+import { Btn, Kicker, PageTitle, Pill } from "@/components/ui";
 
 const levelWord = { stop: "Stop", soon: "Soon", watch: "Watch" } as const;
 const levelTone = { stop: "danger", soon: "warn", watch: "line" } as const;
@@ -74,7 +74,7 @@ export function TableView({ id, step }: { id?: string; step?: number }) {
   return (
     <div>
       <Kicker>A view of the Fix checks</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">{focus && !showRest ? focus.title : "Checks table"}</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">{focus && !showRest ? focus.title : "Checks table"}</PageTitle>
       <p className="mt-1 text-sm text-muted">
         {focus
           ? `${focus.system}. The highlighted row is the check you were on.`
@@ -84,19 +84,19 @@ export function TableView({ id, step }: { id?: string; step?: number }) {
       </p>
 
       {focus && !showRest && neighbors > 0 && (
-        <button type="button" onClick={() => setShowRest(true)} className="mt-3 min-h-11 text-sm font-semibold text-accent">
+        <Btn variant="text" className="mt-3" type="button" onClick={() => setShowRest(true)}>
           Rest of {focus.system}
-        </button>
+        </Btn>
       )}
 
       {!focus && (
         <>
-          <button type="button" onClick={() => setOnlyMine((v) => !v)} className="mt-3 flex min-h-11 items-center gap-2 text-sm font-semibold text-accent">
+          <Btn variant="text" className="mt-3" type="button" onClick={() => setOnlyMine((v) => !v)}>
             <span className={`grid size-5 place-items-center rounded border ${onlyMine ? "border-navy bg-navy text-on-navy" : "border-line bg-sheet"}`}>
               {onlyMine ? "✓" : ""}
             </span>
             Only jobs that fit {model.short}
-          </button>
+          </Btn>
           <div id="table-system" className="chip-row -mx-4 mt-3 flex gap-2 overflow-x-auto px-4 pb-1" role="group" aria-label="System">
             <Filter on={system === ""} onClick={() => pickSystem("")}>
               All
@@ -114,7 +114,7 @@ export function TableView({ id, step }: { id?: string; step?: number }) {
 
       {groups.map((group) => (
         <section key={group.name} className="mt-6">
-          {(showRest || !focus) && <h2 className="font-display text-2xl text-accent">{group.name}</h2>}
+          {(showRest || !focus) && <h2 className="text-2xl text-accent">{group.name}</h2>}
           <div className="mt-2 space-y-3">
             {group.items.map((symptom) => (
               <SymptomTable key={symptom.id} symptom={symptom} year={year} activeId={id} step={step} onOpen={() => push({ name: "symptom", id: symptom.id, step: 0 })} />

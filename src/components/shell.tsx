@@ -9,7 +9,7 @@ import { HomeView } from "@/components/home-view";
 import { MoreView } from "@/components/library-view";
 import { AffiliationNote, DisclaimerCopy } from "@/components/disclaimer";
 import { SetupView } from "@/components/setup-view";
-import { DarkModeSwitch, PageTitle } from "@/components/ui";
+import { DarkModeSwitch, PageTitle, Sheet } from "@/components/ui";
 import { OfflineView } from "@/components/offline-view";
 import { applyTheme, themeChoice } from "@/lib/theme";
 import { holdStorage, readStorageHold } from "@/lib/hold-storage";
@@ -535,7 +535,7 @@ export function Shell() {
             <p className="text-sm font-semibold text-white">A newer copy is ready.</p>
             <button
               type="button"
-              className="min-h-11 shrink-0 rounded-full bg-white px-4 text-sm font-semibold text-[#152A6A]"
+              className="min-h-11 shrink-0 rounded-full bg-white px-4 text-sm font-semibold text-navy"
               style={{ backgroundColor: "#ffffff", color: "#152A6A" }}
               onClick={() => {
                 setUpdateReady(false);
@@ -639,7 +639,7 @@ export function Shell() {
                   <img src="/logo.png" alt="RivetCare" width={806} height={176} className="logo-mark" />
                 </h1>
               ) : (
-                <PageTitle className="font-display text-[2rem] leading-tight text-ink">{tabTitle}</PageTitle>
+                <PageTitle className="text-[2rem] leading-tight text-ink">{tabTitle}</PageTitle>
               )
             ) : null}
             {tabRoot && screen.name !== "home" ? <TrailerStrip /> : null}
@@ -714,23 +714,11 @@ export function Shell() {
       {showSetup && <SetupView />}
 
       {picker && (
-        <div
-          className="fixed inset-0 z-50 flex items-end bg-inverse/40"
-          onClick={() => setPicker(false)}
-        >
-          <div
-            id="coach-dialog"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="coach-title"
-            tabIndex={-1}
-            className="safe-bottom max-h-[80vh] w-full overflow-y-auto rounded-t-3xl bg-sheet px-4 pt-4 outline-none"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="sticky top-0 z-10 -mx-4 flex items-center bg-sheet px-4 pb-2">
+        <Sheet dialogId="coach-dialog" labelledBy="coach-title" onScrim={() => setPicker(false)}>
+            <div className="sticky top-0 z-10 -mx-5 flex items-center bg-sheet px-5 pb-2">
               <BackButton onClick={() => setPicker(false)} />
             </div>
-            <h2 id="coach-title" className="font-display text-2xl text-ink">Which trailer?</h2>
+            <h2 id="coach-title" className="text-2xl text-ink">Which trailer?</h2>
             <p className="mt-1 text-sm text-muted">2027 travel trailers, from the owner’s manuals. Your weight sticker governs. Other is a year or model that is not on this list.</p>
             <div className="mt-4 flex items-center justify-between gap-3 border-t border-rule pt-2">
               <p className="text-sm font-semibold text-ink">Light or dark</p>
@@ -775,8 +763,7 @@ export function Shell() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+        </Sheet>
       )}
 
       <div className="fixed inset-x-0 bottom-24 z-50 flex justify-center px-4" role="status" aria-live="polite">
@@ -813,17 +800,9 @@ export function Shell() {
       </div>
 
       {showDisclaimer && (
-        <div className="no-print fixed inset-0 z-50 flex items-end bg-inverse/50 sm:items-center sm:justify-center">
-          <div
-            id="disclaimer-dialog"
-            tabIndex={-1}
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="disclaimer-title"
-            className="safe-bottom max-h-[90vh] w-full overflow-y-auto rounded-t-3xl bg-sheet px-5 pt-5 sm:max-w-lg sm:rounded-3xl sm:pb-5"
-          >
+        <Sheet dialogId="disclaimer-dialog" labelledBy="disclaimer-title" center>
             <p className="text-xs font-semibold uppercase tracking-wider text-muted">Before you use this</p>
-            <h2 id="disclaimer-title" className="mt-1 font-display text-3xl text-ink">Disclaimer</h2>
+            <h2 id="disclaimer-title" className="mt-1 text-3xl text-ink">Disclaimer</h2>
             <div className="mt-3">
               <DisclaimerCopy />
             </div>
@@ -835,8 +814,7 @@ export function Shell() {
             >
               I understand
             </button>
-          </div>
-        </div>
+        </Sheet>
       )}
     </div>
   );

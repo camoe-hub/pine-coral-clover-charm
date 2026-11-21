@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { Sheet } from "@/components/ui";
 import { codeMatches, rememberPass } from "@/lib/pass-code";
 
 export function PassGate({ onUnlock }: { onUnlock: () => void }) {
@@ -16,13 +17,9 @@ export function PassGate({ onUnlock }: { onUnlock: () => void }) {
   }
 
   return (
-    <div className="no-print fixed inset-0 z-50 flex items-end bg-inverse/50 sm:items-center sm:justify-center">
-      <form
-        onSubmit={submit}
-        className="safe-bottom w-full rounded-t-3xl bg-sheet px-5 pt-5 sm:max-w-lg sm:rounded-3xl sm:pb-5"
-      >
+    <Sheet labelledBy="pass-title" center onSubmit={submit}>
         <p className="text-xs font-semibold uppercase tracking-wider text-muted">RivetCare</p>
-        <h1 className="mt-1 font-display text-3xl text-ink">Enter your code</h1>
+        <h1 id="pass-title" className="mt-1 text-3xl text-ink">Enter your code</h1>
         <p className="mt-2 text-base text-ink">The code is on your Gumroad receipt. This phone asks once.</p>
         <label className="mt-4 block text-sm font-semibold text-ink" htmlFor="pass-code">
           Code
@@ -45,7 +42,6 @@ export function PassGate({ onUnlock }: { onUnlock: () => void }) {
         <button type="submit" className="mt-4 mb-2 min-h-12 w-full rounded-full bg-navy text-sm font-semibold text-on-navy">
           Continue
         </button>
-      </form>
-    </div>
+    </Sheet>
   );
 }

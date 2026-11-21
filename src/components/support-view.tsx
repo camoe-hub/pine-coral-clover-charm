@@ -7,7 +7,7 @@ import { useApp } from "@/lib/store";
 function ProjectCopy() {
   return (
     <section className="space-y-2">
-      <h2 className="font-display text-2xl text-ink">This copy</h2>
+      <h2 className="text-2xl text-ink">This copy</h2>
       <button
         type="button"
         onClick={() => window.dispatchEvent(new Event("rivetcare-check-update"))}
@@ -41,9 +41,9 @@ export function SupportView() {
 
   return (
     <div className="space-y-5">
-      <PageTitle className="font-display text-3xl text-ink">Support</PageTitle>
+      <PageTitle className="text-3xl text-ink">Support</PageTitle>
       <section className="space-y-2">
-        <h2 className="font-display text-2xl text-ink">Report a wrong step</h2>
+        <h2 className="text-2xl text-ink">Report a wrong step</h2>
         <p className="text-base text-ink">Write what the step got wrong. The note stays on this phone. Nothing is sent.</p>
         <label className="block" htmlFor="wrong-step">
           <span className="sr-only">What the step got wrong</span>

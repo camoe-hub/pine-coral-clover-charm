@@ -140,7 +140,7 @@ export function StartAllDates({ onSeparate, title, detail }: { onSeparate?: () =
           </div>
         </div>
       ) : null}
-      {title ? <h2 className="mt-4 font-display text-[1.35rem] leading-tight text-ink">{title}</h2> : null}
+      {title ? <h2 className="mt-4 text-[1.35rem] leading-tight text-ink">{title}</h2> : null}
       {detail ? <p className="mt-1 text-sm text-ink">{detail}</p> : null}
       <p className="mt-3 text-sm text-ink">
         <span className="font-semibold">

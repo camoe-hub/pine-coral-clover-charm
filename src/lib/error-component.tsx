@@ -27,7 +27,7 @@ export function AppErrorComponent({ error }: ErrorComponentProps) {
   return (
     <main className="mx-auto flex min-h-dvh max-w-lg flex-col justify-center gap-3 bg-paper px-6 text-ink">
       <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">RivetCare</p>
-      <PageTitle className="font-display text-3xl">{missing ? "This screen isn't on the phone yet" : "Something went wrong"}</PageTitle>
+      <PageTitle className="text-3xl">{missing ? "This screen isn't on the phone yet" : "Something went wrong"}</PageTitle>
       <p className="text-base text-ink">
         {missing
           ? "This page is not on this phone yet. Open it once while you have a signal."

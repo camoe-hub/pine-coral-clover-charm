@@ -109,13 +109,13 @@ export function PartsView() {
   return (
     <div>
       <Kicker>Service list and tools</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Parts</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Parts</PageTitle>
       <p className="mt-1 text-sm text-muted">
         {partCount} service reminders and the tool list. Numbers follow the selected floor, not every year of that floor. Quote the VIN before you order.
       </p>
       <Card className="mt-4 p-4">
         <Kicker>Needs a signal</Kicker>
-        <h2 className="mt-1 font-display text-2xl text-ink">{book.title}</h2>
+        <h2 className="mt-1 text-2xl text-ink">{book.title}</h2>
         <p className="mt-2 text-sm text-ink">{book.note}</p>
         <a
           href={book.url}
@@ -219,7 +219,7 @@ export function PartsView() {
               const head = source === "guide" && (i === 0 || guideList[i - 1].system !== p.system);
               return (
                 <li key={p.id}>
-                  {head && <h2 className="mb-2 mt-4 font-display text-xl text-ink first:mt-0">{p.system}</h2>}
+                  {head && <h2 className="mb-2 mt-4 text-xl text-ink first:mt-0">{p.system}</h2>}
                   <button onClick={() => push({ name: "part", id: p.id })} className="w-full rounded-card border border-line bg-sheet px-3 py-3 text-left">
                     <span className="font-semibold text-ink">{view.title}</span>
                     {view.otherYear ? (
@@ -250,7 +250,7 @@ export function PartView({ id }: { id: string }) {
     <div className="space-y-4">
       <div>
         <Kicker>{p.system}</Kicker>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">{view.title}</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">{view.title}</PageTitle>
       </div>
       {view.hide && <Pill tone="warn">Not the part for {model.name}</Pill>}
       <Card className="p-4">

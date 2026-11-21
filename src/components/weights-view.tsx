@@ -4,7 +4,7 @@ import { WEIGHTS_KEY, MATCH_LB, MAX_WEIGHTS, TOW_KEY, asTow, asWeighIns, cumulat
 import { useApp } from "@/lib/store";
 import { todayIso, formatWhen } from "@/lib/date";
 import { deleteFile, getFile, prepareFile, putFile } from "@/lib/files";
-import { Btn, Kicker, PageTitle } from "@/components/ui";
+import { Btn, Chip, Kicker, PageTitle } from "@/components/ui";
 
 const KEY = WEIGHTS_KEY;
 
@@ -416,7 +416,7 @@ export function WeightsView() {
     <div className="space-y-6">
       <div>
         <Kicker>Truck scale</Kicker>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">Truck and trailer</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">Truck and trailer</PageTitle>
         <p className="mt-2 text-sm text-muted">
           Ratings come from the door stickers. Weights come from a truck scale. A CAT Scale ticket is one kind. GVW is a measured weight. GVWR is the rated maximum. A red number is a measured weight over a rating. This is not a towing safety assessment.
         </p>
@@ -446,12 +446,12 @@ export function WeightsView() {
       <section>
         <h2 className="font-sans text-[13px] font-semibold uppercase leading-snug tracking-wider text-muted">How the scale ticket is written</h2>
         <div className="mt-2 grid grid-cols-2 gap-2" role="group" aria-label="Scale ticket style">
-          <Toggle on={form.mode === "axle"} onClick={() => setMode("axle")}>
+          <Chip on={form.mode === "axle"} onClick={() => setMode("axle")}>
             Each axle alone
-          </Toggle>
-          <Toggle on={form.mode === "total"} onClick={() => setMode("total")}>
+          </Chip>
+          <Chip on={form.mode === "total"} onClick={() => setMode("total")}>
             Running total
-          </Toggle>
+          </Chip>
         </div>
         <p className="mt-2 text-sm text-muted">
           {form.mode === "total"
@@ -537,7 +537,7 @@ export function WeightsView() {
       />
 
       <section className="rounded-card border border-line bg-sheet p-4">
-        <h2 className="font-display text-2xl text-ink">What the hitch is doing</h2>
+        <h2 className="text-2xl text-ink">What the hitch is doing</h2>
         <dl className="mt-3">
           <Fact label="Trailer weight" value={lb(result.trailer.weight.actual)} margin={result.trailer.weight.left} marginOf="trailer GVWR" share={result.trailer.weight.pct} shareOf="loaded trailer as a share of GVWR" />
           <Fact label="Tongue weight, bars off" value={lb(result.trailer.tongue.actual)} margin={result.trailer.tongue.left} marginOf="tongue rating" share={result.trailer.tongue.pct} shareOf="tongue rating" />
@@ -576,13 +576,11 @@ export function WeightsView() {
         trips={trips}
         onOpen={openWeighIn}
       />
-      <button
+      <Btn variant="text"
         type="button"
-        className="min-h-11 text-sm font-semibold text-accent"
-        onClick={clearNumbers}
-      >
+        onClick={clearNumbers}>
         Clear the scale numbers
-      </button>
+      </Btn>
     </div>
   );
 }
@@ -621,7 +619,7 @@ function Result({ title, lines, note }: { title: string; lines: Array<[string, L
   const over = lines.some(([, row]) => row.left != null && row.left < 0);
   return (
     <section className="min-w-0 rounded-card border border-line bg-sheet p-4">
-      <h2 className="font-display text-2xl text-ink">{title}</h2>
+      <h2 className="text-2xl text-ink">{title}</h2>
       {over && <p className="mt-1 text-sm font-semibold text-stop">A measured weight is over its rating.</p>}
       <dl className="mt-3">
         {lines.map(([label, row, rating]) => {
@@ -684,7 +682,7 @@ function HitchCalc({ truck, noWd, wd }: { truck: Pass; noWd: Pass; wd: Pass }) {
   const missing = hitch.lostFront == null || hitch.restoredFront == null;
   return (
     <section className="rounded-card border border-line bg-sheet p-4">
-      <h2 className="font-display text-2xl text-ink">Weight-distribution hitch</h2>
+      <h2 className="text-2xl text-ink">Weight-distribution hitch</h2>
       <p className="mt-2 text-sm text-ink">The bars move load among the axles. They do not change the tongue weight or the combined weight.</p>
       {missing ? (
         <p className="mt-3 text-sm text-ink">Enter the truck alone, then the coupled weigh with the bars off, then the same weigh with the bars on. Those three front-axle numbers are the hitch calculation.</p>
@@ -721,7 +719,7 @@ function signedMove(n: number | null, gained: string, lost: string) {
 function TicketSheet({ explained }: { explained: ReturnType<typeof explainTicket> }) {
   return (
     <section className="rounded-card border border-line bg-sheet p-4">
-      <h2 className="font-display text-2xl text-ink">This ticket</h2>
+      <h2 className="text-2xl text-ink">This ticket</h2>
       <dl className="mt-3">
         {sheetRows(explained).map((row) => (
           <div key={row.label} className="border-b border-rule py-2 last:border-b-0">
@@ -893,18 +891,5 @@ function Text({ label, value, onChange }: { label: string; value: string; onChan
         className="mt-1 min-h-11 w-full rounded-xl border border-line bg-sheet px-3 text-ink"
       />
     </div>
-  );
-}
-
-function Toggle({ on, onClick, children }: { on: boolean; onClick: () => void; children: string }) {
-  return (
-    <button
-      type="button"
-      aria-pressed={on}
-      onClick={onClick}
-      className={`min-h-11 rounded-full px-3 text-sm font-semibold ${on ? "bg-navy text-on-navy" : "border border-line bg-sheet text-ink"}`}
-    >
-      {children}
-    </button>
   );
 }

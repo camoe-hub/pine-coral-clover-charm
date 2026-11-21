@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { PageTitle } from "@/components/ui";
+import { Btn, PageTitle } from "@/components/ui";
 import { Printer } from "lucide-react";
 import { symptoms, systems } from "@/data/symptoms";
 import { causes, causeFits } from "@/data/causes";
@@ -41,12 +41,12 @@ export function PrintView() {
           Print or save as PDF
         </button>
         <p className="text-sm text-muted">On iPhone: Print, then choose a printer or Save to Files. The tabs and this button stay off the page.</p>
-        <button type="button" role="checkbox" aria-checked={onlyMine} onClick={() => setOnlyMine((v) => !v)} className="flex min-h-11 items-center gap-2 text-sm font-semibold text-accent">
+        <Btn variant="text" type="button" role="checkbox" aria-checked={onlyMine} onClick={() => setOnlyMine((v) => !v)}>
           <span className={`grid size-5 place-items-center rounded border ${onlyMine ? "border-navy bg-navy text-on-navy" : "border-line bg-sheet"}`}>
             {onlyMine ? "✓" : ""}
           </span>
           Only jobs that fit {model.short}
-        </button>
+        </Btn>
         <div className="chip-row flex max-w-full gap-2 overflow-x-auto pb-1">
           <Filter on={system === ""} onClick={() => setSystem("")}>
             All systems
@@ -61,7 +61,7 @@ export function PrintView() {
 
       <header className="border-b border-ink pb-3">
         <p className="text-xs font-semibold uppercase tracking-wider text-accent">RivetCare · symptom, then check, then action</p>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">Symptom checklist</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">Symptom checklist</PageTitle>
         <p className="mt-1 text-sm text-ink">
           {model.name}
           {onlyMine ? " · this coach only" : " · every system in the book"} · {count} symptoms
@@ -76,7 +76,7 @@ export function PrintView() {
 
       {system === "" && (
         <section className="mt-4">
-          <h2 className="border-b border-line pb-1 font-display text-xl text-accent">More than one thing is wrong</h2>
+          <h2 className="border-b border-line pb-1 text-xl text-accent">More than one thing is wrong</h2>
           <p className="mt-1 text-sm text-ink">If you see more than one of these, start with the cause under them.</p>
           <ul className="mt-2 space-y-2 text-sm text-ink">
             {(onlyMine ? causes.filter((c) => causeFits(c, model, year)) : causes).map((c) => (
@@ -91,7 +91,7 @@ export function PrintView() {
 
       {groups.map((group) => (
         <section key={group.name} className="mt-4">
-          <h2 className="border-b border-line pb-1 font-display text-xl text-accent">{group.name}</h2>
+          <h2 className="border-b border-line pb-1 text-xl text-accent">{group.name}</h2>
           <ul className="mt-2 space-y-3">
             {group.items.map((symptom) => (
               <li key={symptom.id} className="print-symptom">

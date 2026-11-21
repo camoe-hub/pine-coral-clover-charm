@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { nearestShops, shopsAt, RANGES, typeLabel, type RangeMiles, type ShopHit, type ShopKind } from "@/lib/service";
 import { useApp } from "@/lib/store";
-import { Btn, Kicker, PageTitle } from "@/components/ui";
+import { Btn, Chip, Kicker, PageTitle } from "@/components/ui";
 
 const KEY = "rivetcare-service";
 
@@ -115,7 +115,7 @@ export function ServiceView() {
     <div className="space-y-5">
       <div>
         <Kicker>Service and repair</Kicker>
-        <PageTitle className="mt-1 font-display text-3xl text-ink">Find a shop</PageTitle>
+        <PageTitle className="mt-1 text-3xl text-ink">Find a shop</PageTitle>
         <p className="mt-2 text-base text-ink">Dealers and independent shops near a ZIP.</p>
         <SavedDealer />
       </div>
@@ -176,15 +176,9 @@ export function ServiceView() {
 
       <div className="chip-row -mx-4 flex gap-2 overflow-x-auto px-4" role="group" aria-label="Kind of service">
         {KINDS.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            aria-pressed={kind === item.id}
-            onClick={() => setKind(item.id)}
-            className={`min-h-11 min-w-11 shrink-0 rounded-full px-3 text-sm font-semibold ${kind === item.id ? "bg-navy text-on-navy" : "border border-line bg-sheet text-ink"}`}
-          >
+          <Chip key={item.id} on={kind === item.id} onClick={() => setKind(item.id)}>
             {item.label}
-          </button>
+          </Chip>
         ))}
       </div>
 
@@ -292,7 +286,7 @@ function ShopCard({ hit }: { hit: ShopHit }) {
         {miles != null ? ` · ${Math.round(miles)} mi` : " · no map point, call to confirm"}
         {shop.approx && miles != null ? " · placed at the ZIP center, not the street" : ""}
       </p>
-      <h2 className="mt-1 font-display text-2xl text-ink">{shop.name}</h2>
+      <h2 className="mt-1 text-2xl text-ink">{shop.name}</h2>
       <p className="mt-1 text-sm text-muted">
         {shop.street ? `${shop.street}, ` : ""}
         {place}

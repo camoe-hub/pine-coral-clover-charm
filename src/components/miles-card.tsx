@@ -138,7 +138,7 @@ export function MilesCard({ onNavy = false, quiet = false, bare = false }: { onN
               onSubmit={saveTotal}
               onClick={(e) => e.stopPropagation()}
             >
-              <h2 className="font-display text-2xl text-ink">Trailer miles</h2>
+              <h2 className="text-2xl text-ink">Trailer miles</h2>
               <label className="mt-3 block text-sm font-semibold text-ink" htmlFor={totalId}>
                 Lifetime miles
               </label>
@@ -155,9 +155,9 @@ export function MilesCard({ onNavy = false, quiet = false, bare = false }: { onN
               <Btn type="submit" className="mt-3 w-full">
                 Save the reading
               </Btn>
-              <button type="button" onClick={() => setMode(null)} className="mt-1 min-h-12 w-full text-sm font-semibold text-accent">
+              <Btn variant="text" className="mt-1 min-h-12 w-full justify-center" type="button" onClick={() => setMode(null)}>
                 Back
-              </button>
+              </Btn>
             </form>
           </div>,
           document.body,

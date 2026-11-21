@@ -320,7 +320,7 @@ export function HomeView() {
           <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-muted">{unsetCopy ? "Schedule" : dueNow ? "Due now" : "Next due"}</p>
           {featureWhy && featureWhy !== "Due now" ? <p className={`text-sm font-semibold ${dueNow ? "text-signal" : "text-caution"}`}>{featureWhy}</p> : null}
         </div>
-        <h2 className="mt-2 font-display text-[1.65rem] leading-tight text-ink">
+        <h2 className="mt-2 text-[1.65rem] leading-tight text-ink">
           {feature ? feature.title : retorqueOn ? (lugNow ? `${lugNow.miles} mi lug check` : "Re-torque the lugs") : unsetCopy ? unsetCopy.title : "Nothing is due"}
         </h2>
         <p className="mt-1 text-sm text-ink">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PageTitle } from "@/components/ui";
+import { Btn, PageTitle } from "@/components/ui";
 import { PrivacySections } from "@/components/legal-copy";
 import { closeFiles } from "@/lib/files";
 import { closeRestoreUndo } from "@/lib/restore-undo";
@@ -65,10 +65,10 @@ export function PrivacyView() {
 
   return (
     <div className="space-y-5">
-      <PageTitle className="font-display text-3xl text-ink">Privacy</PageTitle>
+      <PageTitle className="text-3xl text-ink">Privacy</PageTitle>
       <PrivacySections />
       <section className="space-y-2 rounded-card border border-line bg-sheet p-4">
-        <h2 className="font-display text-2xl text-ink">Delete the records</h2>
+        <h2 className="text-2xl text-ink">Delete the records</h2>
         <p className="text-base text-ink">This removes the trailers, the log, the photos, the notes, the scale tickets, the floor-level spans, the phone zero, the saved shop search, a restore undo copy, and a saved parts list on this phone. Anything else this app saved under its own name on this phone goes with them. A backup file you already saved in Files is not deleted. The app itself can stay until you clear this site’s data in the browser.</p>
         {confirm ? (
           <div className="space-y-2">
@@ -76,14 +76,14 @@ export function PrivacyView() {
             <button type="button" onClick={() => void erase()} disabled={busy} className="min-h-12 w-full rounded-full border border-stop px-4 font-semibold text-stop disabled:opacity-40">
               {busy ? "Deleting…" : "Delete the records on this phone"}
             </button>
-            <button type="button" onClick={() => setConfirm(false)} disabled={busy} className="min-h-11 w-full font-semibold text-accent">
+            <Btn variant="text" className="w-full justify-center text-base" type="button" onClick={() => setConfirm(false)} disabled={busy}>
               Keep them
-            </button>
+            </Btn>
           </div>
         ) : (
-          <button type="button" onClick={() => setConfirm(true)} className="min-h-11 font-semibold text-stop">
+          <Btn variant="text" className="text-base text-stop" type="button" onClick={() => setConfirm(true)}>
             Delete all local records
-          </button>
+          </Btn>
         )}
       </section>
     </div>

@@ -40,7 +40,7 @@ export function NotesView() {
   return (
     <div>
       <Kicker>This trailer</Kicker>
-      <PageTitle className="mt-1 font-display text-3xl text-ink">Notes</PageTitle>
+      <PageTitle className="mt-1 text-3xl text-ink">Notes</PageTitle>
       <p className="mt-2 text-sm text-muted">Reminders for this trailer. They are not service records, and they stay on this phone with the log.</p>
       <label className="mt-4 block" htmlFor="personal-note">
         <span className="sr-only">New note</span>
@@ -99,19 +99,18 @@ export function NotesView() {
               )}
               {editing !== note.id && (
                 <div className="mt-2 flex gap-4">
-                  <button
+                  <Btn variant="text"
                     type="button"
-                    className="min-h-11 text-sm font-semibold text-accent"
                     onClick={() => {
                       setEditing(note.id);
                       setEditText(note.text);
                     }}
                   >
                     Edit
-                  </button>
-                  <button type="button" className="min-h-11 text-sm font-semibold text-stop" onClick={() => removeNote(note.id)}>
+                  </Btn>
+                  <Btn variant="text" className="text-stop" type="button" onClick={() => removeNote(note.id)}>
                     Remove
-                  </button>
+                  </Btn>
                 </div>
               )}
             </li>
