@@ -1,0 +1,138 @@
+{
+  "name": "RivetCare",
+  "version": "2026.11.98",
+  "kind": "Static single-page app",
+  "stack": ["React 19", "Vite", "TypeScript", "Tailwind CSS 4", "Zustand"],
+  "records": "Stay on the phone. There is no account and no server database for owner records.",
+  "editions": [
+    {
+      "id": "preview",
+      "serves": "The in-browser workshop preview",
+      "entry": "src/routes/__root.tsx and src/routes/index.tsx",
+      "server": "TanStack Start, Vite dev on port 8080",
+      "gate": "No sale-code screen"
+    },
+    {
+      "id": "host",
+      "serves": "The copy that is uploaded and sold",
+      "entry": "host/index.html then src/host-main.tsx",
+      "build": "npm run build:host writes artifacts/rivetcare-host",
+      "zip": "files/rivetcare-host.zip",
+      "gate": "PassGate asks once. The flag is localStorage rivetcare-pass and is not cleared with the records."
+    }
+  ],
+  "boot": [
+    { "step": 1, "name": "Splash", "where": "LaunchSplash in src/host-main.tsx", "note": "Brand image for about 1.7 seconds. Hidden in the preview." },
+    { "step": 2, "name": "Path", "where": "pagePath()", "note": "/privacy and /support render PublicPage. Every other path opens the app." },
+    { "step": 3, "name": "Code gate", "where": "src/components/pass-gate.tsx", "note": "Host edition only, and only until rivetcare-pass is set." },
+    { "step": 4, "name": "Shell", "where": "src/components/shell.tsx", "note": "Tabs, hash address, search, disclaimer, and trailer picker." },
+    { "step": 5, "name": "Screen", "where": "ScreenBody switch", "note": "One screen component for the current hash. Unknown screens use MissingScreen." }
+  ],
+  "navigation": {
+    "address": "Hash only. Home is the plain path. Other screens are #/name or #/name/id.",
+    "module": "src/lib/screen-url.ts",
+    "tabs": [
+      { "label": "Home", "screen": "home" },
+      { "label": "Maintain", "screen": "care" },
+      { "label": "Records", "screen": "records" },
+      { "label": "Fix", "screen": "fix" },
+      { "label": "Library", "screen": "more" }
+    ]
+  },
+  "screens": [
+    { "name": "home", "file": "src/components/home-view.tsx", "group": "Home" },
+    { "name": "care", "file": "src/components/care-view.tsx", "group": "Maintain" },
+    { "name": "procedure", "hash": "#/procedure/:id", "file": "src/components/care-view.tsx", "group": "Maintain" },
+    { "name": "procedures", "file": "src/components/more-view.tsx", "group": "Maintain" },
+    { "name": "weights", "file": "src/components/weights-view.tsx", "group": "Maintain" },
+    { "name": "level", "file": "src/components/level-view.tsx", "group": "Maintain" },
+    { "name": "tires", "file": "src/components/tires-view.tsx", "group": "Maintain" },
+    { "name": "supplies", "file": "src/components/supplies-view.tsx", "group": "Maintain" },
+    { "name": "notes", "file": "src/components/notes-view.tsx", "group": "Maintain" },
+    { "name": "records", "file": "src/components/records-view.tsx", "group": "Records" },
+    { "name": "log", "file": "src/components/more-view.tsx", "group": "Records" },
+    { "name": "desk", "file": "src/components/shop-sheet.tsx", "group": "Records" },
+    { "name": "history", "file": "src/components/shop-sheet.tsx", "group": "Records" },
+    { "name": "backup", "file": "src/components/backup-view.tsx", "group": "Records" },
+    { "name": "fix", "file": "src/components/fix-view.tsx", "group": "Fix" },
+    { "name": "symptom", "hash": "#/symptom/:id/:step", "file": "src/components/fix-view.tsx", "group": "Fix" },
+    { "name": "table", "file": "src/components/table-view.tsx", "group": "Fix" },
+    { "name": "flows", "file": "src/components/flow-view.tsx", "group": "Fix" },
+    { "name": "flow", "hash": "#/flow/:id", "file": "src/components/flow-view.tsx", "group": "Fix" },
+    { "name": "printout", "file": "src/components/print-view.tsx", "group": "Fix" },
+    { "name": "service", "file": "src/components/service-view.tsx", "group": "Fix" },
+    { "name": "codes", "file": "src/components/more-view.tsx", "group": "Fix" },
+    { "name": "more", "file": "src/components/library-view.tsx", "group": "Library" },
+    { "name": "manuals", "file": "src/components/manuals-view.tsx", "group": "Library" },
+    { "name": "parts", "file": "src/components/parts-view.tsx", "group": "Library" },
+    { "name": "part", "hash": "#/part/:id", "file": "src/components/parts-view.tsx", "group": "Library" },
+    { "name": "figures", "file": "src/components/figure-view.tsx", "group": "Library" },
+    { "name": "figure", "hash": "#/figure/:id", "file": "src/components/figure-view.tsx", "group": "Library" },
+    { "name": "sheet", "hash": "#/sheet/:page", "file": "src/components/figure-view.tsx", "group": "Library" },
+    { "name": "lists", "file": "src/components/more-view.tsx", "group": "Library" },
+    { "name": "checklist", "hash": "#/checklist/:id", "file": "src/components/more-view.tsx", "group": "Library" },
+    { "name": "specs", "file": "src/components/more-view.tsx", "group": "Library" },
+    { "name": "recalls", "file": "src/components/more-view.tsx", "group": "Library" },
+    { "name": "tools", "file": "src/components/more-view.tsx", "group": "Library" },
+    { "name": "about", "file": "src/components/more-view.tsx", "group": "Library" },
+    { "name": "offline", "file": "src/components/offline-view.tsx", "group": "Library" },
+    { "name": "privacy", "file": "src/components/privacy-view.tsx", "group": "About" },
+    { "name": "support", "file": "src/components/support-view.tsx", "group": "About" }
+  ],
+  "state": {
+    "store": "src/lib/store.ts",
+    "library": "Zustand",
+    "persists": "localStorage key rivetcare-v1",
+    "holds": ["VIN and year", "floor plan", "nickname", "odometer", "maintenance marks", "service log", "notes", "checklist marks", "theme choice is separate"]
+  },
+  "storage": {
+    "localStorage": [
+      { "key": "rivetcare-v1", "holds": "The book: trailer, miles, marks, log, notes" },
+      { "key": "rivetcare-v1-unreadable", "holds": "A copy kept when the book could not be parsed" },
+      { "key": "rivetcare-v1-before-trim", "holds": "The raw book before a trim" },
+      { "key": "rivetcare-weights", "holds": "Scale tickets and tow ratings" },
+      { "key": "rivetcare-level", "holds": "Saved level spans" },
+      { "key": "rivetcare-level-zero", "holds": "Phone level zero" },
+      { "key": "rivetcare-service", "holds": "Last shop search: ZIP, range, kind" },
+      { "key": "rivetcare-theme", "holds": "Light or dark" },
+      { "key": "rivetcare-pass", "holds": "Sale code already accepted. Survives Delete all local records." },
+      { "key": "rivetcare-offline-set", "holds": "Which offline pack was saved" }
+    ],
+    "indexedDB": [
+      { "name": "rivetcare-files", "holds": "Photos, PDFs, and receipts" },
+      { "name": "rivetcare-books", "holds": "Cached factory pages for offline" },
+      { "name": "rivetcare-undo", "holds": "The previous book, so a restore can be undone" }
+    ]
+  },
+  "bundledData": [
+    { "file": "src/data/models.ts", "holds": "Floor plans and ratings" },
+    { "file": "src/data/schedule.ts", "holds": "Maintenance jobs" },
+    { "file": "src/data/symptoms.ts", "holds": "Fix checks" },
+    { "file": "src/data/codes.ts", "holds": "Fault codes" },
+    { "file": "src/data/procedures.ts", "holds": "Procedures" },
+    { "file": "src/data/parts.ts", "holds": "Parts" },
+    { "file": "src/data/flows.ts", "holds": "Flowcharts" },
+    { "file": "src/data/figures.ts", "holds": "Diagrams" },
+    { "file": "src/data/manuals.ts", "holds": "Links to Airstream manuals" },
+    { "file": "src/data/recalls.ts", "holds": "Recalls and service bulletins" },
+    { "file": "src/data/shops.json", "holds": "Shop list used with a ZIP" },
+    { "file": "src/data/zips.json", "holds": "ZIP coordinates for shop distance" }
+  ],
+  "ui": {
+    "file": "src/components/ui.tsx",
+    "pieces": ["Sheet", "Card", "Kicker", "PageTitle", "Pill", "Chip", "DarkModeSwitch", "Notice", "Btn"],
+    "sheets": ["Trailer picker", "Disclaimer", "Sale-code gate", "Backup", "Restore"]
+  },
+  "leavesThePhone": [
+    { "what": "Shop search", "when": "A ZIP or location is used. The request is for nearby shops." },
+    { "what": "Manuals and parts books", "when": "A link opens Airstream's site in a new tab." },
+    { "what": "Recalls", "when": "The NHTSA button opens the government site. The VIN is copied, not sent by the app." },
+    { "what": "Backup file", "when": "The owner shares or saves rivetcare-backup.json. Nothing is uploaded to an account." },
+    { "what": "Map links", "when": "A dealer or shop opens Apple Maps." }
+  ],
+  "serviceWorker": {
+    "role": "Installs the home-screen app and keeps the shell available offline",
+    "cache": "rivetcare-shell",
+    "update": "The Support screen can dispatch rivetcare-check-update"
+  }
+}

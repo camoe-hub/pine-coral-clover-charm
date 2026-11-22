@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RivetCare architecture</title>
+  <style>
+    :root {
+      --paper: #f7f8f9;
+      --sheet: #fff;
+      --ink: #1d2732;
+      --muted: #3a4550;
+      --line: #d5dbe1;
+      --navy: #152a6a;
+      --soft: #d7e8f2;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.45 system-ui, sans-serif;
+    }
+    header, main { max-width: 880px; margin: 0 auto; padding: 28px 20px; }
+    header { padding-bottom: 0; }
+    h1 { margin: 0; font-size: 32px; letter-spacing: -0.02em; }
+    h2 { margin: 28px 0 8px; font-size: 20px; }
+    p { margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+    .flow, .grid { display: grid; gap: 8px; }
+    .flow { grid-template-columns: repeat(5, 1fr); margin-top: 16px; }
+    .grid { grid-template-columns: 1fr 1fr; }
+    article, li.card {
+      background: var(--sheet);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 14px;
+    }
+    article strong, .card strong { display: block; }
+    ol.flow { list-style: none; padding: 0; }
+    ol.flow li { background: var(--navy); color: #f7fbfc; border-radius: 14px; padding: 12px; }
+    ol.flow span { display: block; opacity: 0.75; font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; background: var(--sheet); border-radius: 14px; overflow: hidden; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 14px; }
+    th { background: var(--soft); }
+    code { font-family: ui-monospace, monospace; font-size: 12px; }
+    ul.plain { margin: 0; padding-left: 18px; }
+    @media (max-width: 700px) {
+      .flow, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="muted">RivetCare · 2026.11.98</p>
+    <h1>Architecture</h1>
+    <p>A static single-page app. React draws the screens. The owner's records stay on the phone. The machine-readable copy of this map is <a href="rivetcare-architecture.json">rivetcare-architecture.json</a>.</p>
+    <ol class="flow">
+      <li><span>1</span>Splash</li>
+      <li><span>2</span>Path</li>
+      <li><span>3</span>Code gate</li>
+      <li><span>4</span>Shell</li>
+      <li><span>5</span>Screen</li>
+    </ol>
+  </header>
+  <main>
+    <h2>Two copies</h2>
+    <div class="grid">
+      <article>
+        <strong>Preview</strong>
+        <p class="muted">Workshop preview on port 8080. TanStack Start serves it. No sale-code screen.</p>
+      </article>
+      <article>
+        <strong>Sold host</strong>
+        <p class="muted"><code>host/index.html</code> loads <code>src/host-main.tsx</code>. <code>npm run build:host</code> writes the folder. The zip is <code>files/rivetcare-host.zip</code>.</p>
+      </article>
+    </div>
+
+    <h2>What opens</h2>
+    <table>
+      <thead><tr><th>Address</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td><code>/</code></td><td>Code gate once, then the shell</td></tr>
+        <tr><td><code>/privacy</code> and <code>/support</code></td><td>A public page, no app and no records</td></tr>
+        <tr><td><code>#/care</code>, <code>#/fix</code>, and the rest</td><td>One screen inside the shell. Home has no hash.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Five tabs</h2>
+    <table>
+      <thead><tr><th>Tab</th><th>Opens</th></tr></thead>
+      <tbody>
+        <tr><td>Home</td><td>Trailer, miles, and shortcuts</td></tr>
+        <tr><td>Maintain</td><td>Due jobs, tires, level, weights, supplies</td></tr>
+        <tr><td>Records</td><td>Service log, shop sheet, backup</td></tr>
+        <tr><td>Fix</td><td>Symptoms, flowcharts, fault codes, shops</td></tr>
+        <tr><td>Library</td><td>Manuals, parts, diagrams, checklists, about</td></tr>
+      </tbody>
+    </table>
+
+    <h2>On the phone</h2>
+    <div class="grid">
+      <article>
+        <strong>localStorage</strong>
+        <ul class="plain">
+          <li><code>rivetcare-v1</code> trailer, miles, marks, log, notes</li>
+          <li><code>rivetcare-weights</code> scale tickets</li>
+          <li><code>rivetcare-level</code> and <code>rivetcare-level-zero</code></li>
+          <li><code>rivetcare-service</code> last shop search</li>
+          <li><code>rivetcare-pass</code> sale code, kept when records are deleted</li>
+        </ul>
+      </article>
+      <article>
+        <strong>IndexedDB</strong>
+        <ul class="plain">
+          <li><code>rivetcare-files</code> photos and PDFs</li>
+          <li><code>rivetcare-books</code> pages saved for offline</li>
+          <li><code>rivetcare-undo</code> the book before a restore</li>
+        </ul>
+      </article>
+    </div>
+
+    <h2>Shared controls</h2>
+    <p class="muted">All in <code>src/components/ui.tsx</code>. Screens compose them. Nothing subclasses them.</p>
+    <p>Sheet, Card, Kicker, PageTitle, Pill, Chip, DarkModeSwitch, Notice, Btn.</p>
+    <p class="muted">One sheet frame: trailer picker, disclaimer, sale-code gate, backup, and restore.</p>
+
+    <h2>What can leave the phone</h2>
+    <ul class="plain">
+      <li>A shop lookup, when a ZIP is used.</li>
+      <li>A manual link, which opens Airstream's site.</li>
+      <li>The NHTSA recalls button. The VIN is copied, not sent by the app.</li>
+      <li>A backup file the owner shares or saves. It is not uploaded to an account.</li>
+    </ul>
+  </main>
+</body>
+</html>

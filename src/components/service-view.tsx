@@ -282,7 +282,6 @@ function ShopCard({ hit }: { hit: ShopHit }) {
     <li className="rounded-card border border-line bg-sheet p-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-muted">
         {typeLabel(shop.type)}
-        {shop.certified ? " · Five Rivet" : ""}
         {miles != null ? ` · ${Math.round(miles)} mi` : " · no map point, call to confirm"}
         {shop.approx && miles != null ? " · placed at the ZIP center, not the street" : ""}
       </p>

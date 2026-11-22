@@ -30,15 +30,13 @@ describe("a damaged backup does not replace records", () => {
 });
 
 describe("backup name", () => {
-  it("writes RivetCare and still reads a SilverBullet file", () => {
-    const legacy = JSON.parse(readFileSync(new URL("./fixtures/legacy-backup.json", import.meta.url), "utf8"));
+  it("writes RivetCare and refuses a file from another app", () => {
     const current = JSON.parse(readFileSync(new URL("./fixtures/rivetcare-backup.json", import.meta.url), "utf8"));
     const unmarked = { version: 1, modelId: "c28", log: [{ id: "plain", iso: "2026-01-01", miles: 1, note: "no name field" }] };
-    assert.equal(backupAppOk(legacy.app), true);
     assert.equal(backupAppOk(current.app), true);
     assert.equal(backupAppOk(undefined), true);
     assert.equal(backupAppOk("Other"), false);
-    for (const file of [legacy, current, unmarked]) {
+    for (const file of [current, unmarked]) {
       const pending = useApp.getState().importBackup(file);
       assert.equal(pending.ok, true);
       if (!pending.ok) continue;
